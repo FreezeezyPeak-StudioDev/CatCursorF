@@ -1,6 +1,5 @@
-/* Marca Freezeezy Peak.
-   GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
-   Correo: freezeezypeak.studiodev@gmail.com */
+/* CatCursorF v1.0 - Freezeezy Peak.
+   GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com */
 * { box-sizing: border-box; image-rendering: pixelated; }
 body {
   margin: 0; background: #14141a; color: #f2f2f2;
@@ -37,7 +36,7 @@ body a, body button { cursor: url("../assets/cursors/Cat - Link Select B.cur"), 
 .key.is-on { background: #1f6b3a; }
 .key.go { background: #1f6b3a; flex: 1; }
 
-/* Páginas independientes, distintas a la ventana de la extensión. */
+/* Paginas independientes, distintas a la ventana de la extension. / Standalone pages, separate from the extension window. */
 body.page-tutorial { background: radial-gradient(circle at top, #4a4a4a, #121212 62%); color: #f4f4f4; }
 .page-tutorial .page { max-width: 760px; }
 .page-tutorial .brand { padding: 22px 16px 14px; border-bottom: 1px solid rgba(255,255,255,.22); }

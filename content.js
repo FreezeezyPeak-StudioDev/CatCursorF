@@ -1,8 +1,8 @@
-// Marca Freezeezy Peak.
-// GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
-// Correo: freezeezypeak.studiodev@gmail.com
+// CatCursorF v1.0 - Freezeezy Peak.
+// Contenido: 8 cursores, sonidos y efecto festivo; se oculta en video/pantalla completa. / Content: 8 cursors, sounds and holiday effect; hidden on video/fullscreen.
+// GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 (() => {
-  // CatCursorF: 8 cursores, sonidos y festivo que se oculta en video/pantalla completa.
+  // 8 cursores contextuales, sonidos y festivo. / 8 contextual cursors, sounds and holiday effect.
   const C = (name) => browser.runtime.getURL(`assets/cursors/${name}`);
   const URLS = {
     normal: C("Cat - Normal Select.cur"),

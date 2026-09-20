@@ -1,8 +1,7 @@
-/* Marca Freezeezy Peak.
-   GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
-   Correo: freezeezypeak.studiodev@gmail.com */
-/* CatCursorF: interfaz del navegador. Copiar con los 8 .cur a <perfil>/chrome/.
-   Requiere toolkit.legacyUserProfileCustomizations.stylesheets = true. */
+/* CatCursorF v1.0 - Freezeezy Peak.
+   GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com */
+/* Interfaz del navegador. Copiar con los 8 .cur a <perfil>/chrome/. / Browser UI. Copy with the 8 .cur files to <profile>/chrome/.
+   Requiere toolkit.legacyUserProfileCustomizations.stylesheets = true. / Requires toolkit.legacyUserProfileCustomizations.stylesheets = true. */
 
 * {
   cursor: url("Cat - Normal Select.cur"), auto !important;

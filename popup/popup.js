@@ -1,7 +1,6 @@
-// Marca Freezeezy Peak.
-// GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
-// Correo: freezeezypeak.studiodev@gmail.com
-// CatCursorF: menú, estados, juego Shell e idioma desde _locales.
+// CatCursorF v1.0 - Freezeezy Peak.
+// Menu, estados, juego Shell e idioma desde _locales. / Menu, states, Shell game and locale from _locales.
+// GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 const EMAIL = "freezeezypeak.studiodev@gmail.com";
 const STATUE_COST = 1000000;
 const THEMES = ["calc", "win", "mc", "gd", "nav", "ny"];
@@ -29,6 +28,43 @@ const $ = (id) => document.getElementById(id);
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 const round2 = (n) => Math.round(n * 100) / 100;
 const txt = (k) => (T[k] && T[k].message ? T[k].message.replace(/\$\$/g, "$") : k);
+
+// Render seguro sin innerHTML: solo p/b/a/img/br con lista permitida. / Safe render without innerHTML: only p/b/a/img/br with allowlist.
+// Fuente local: _locales/*.json empaquetado, sin datos remotos ni de usuario. / Local source: bundled _locales/*.json, no remote or user data.
+function setSafeHtml(el, html) {
+  el.textContent = "";
+  try {
+    const doc = new DOMParser().parseFromString("<div>" + html + "</div>", "text/html");
+    const src = doc.body.firstChild;
+    if (!src) return;
+    const allowed = { P: ["class"], B: [], A: ["href"], IMG: ["src", "alt", "class"], BR: [] };
+    const clean = (node, parent) => {
+      for (const child of Array.from(node.childNodes)) {
+        if (child.nodeType === 3) {
+          parent.appendChild(document.createTextNode(child.textContent));
+        } else if (child.nodeType === 1) {
+          const tag = child.tagName.toUpperCase();
+          if (!allowed[tag]) { clean(child, parent); continue; }
+          const out = document.createElement(tag.toLowerCase());
+          for (const attr of allowed[tag]) {
+            const v = child.getAttribute(attr);
+            if (!v) continue;
+            if (/javascript:/i.test(v)) continue;
+            if (attr === "href" && !/^(https:\/\/|mailto:)/.test(v)) continue;
+            if (attr === "src" && !/^(\.\.\/assets\/|assets\/)/.test(v)) continue;
+            out.setAttribute(attr, v);
+          }
+          if (tag === "A") { out.setAttribute("target", "_blank"); out.setAttribute("rel", "noopener"); }
+          clean(child, out);
+          parent.appendChild(out);
+        }
+      }
+    };
+    clean(src, el);
+  } catch (e) {
+    el.textContent = String(html).replace(/<[^>]+>/g, "");
+  }
+}
 
 async function loadLocale(l) {
   try {
@@ -60,7 +96,7 @@ function statusText() {
 
 function popupFxMode() {
   if (!stars) return null;
-  // El tema elegido tiene prioridad sobre la fecha: Año Nuevo nunca conserva nieve.
+  // El tema elegido tiene prioridad sobre la fecha. / Selected theme takes precedence over date.
   if (theme === "ny") return "newyear";
   if (theme === "nav") return "xmas";
   if (festive === "off") return theme === "nav" ? "xmas" : theme === "ny" ? "newyear" : null;
@@ -149,8 +185,8 @@ function render() {
   THEMES.forEach((th) => {
     document.querySelectorAll(".pick-" + th).forEach((b) => b.classList.toggle("is-on", theme === th));
   });
-  // Fuente confiable local: _locales/*.json empaquetado, sin datos remotos ni de usuario.
-  $("credits-body").innerHTML = txt("creditsHtml");
+  // Fuente local: _locales/*.json empaquetado. / Local source: bundled _locales/*.json.
+  setSafeHtml($("credits-body"), txt("creditsHtml"));
   renderGame();
   applyPopupSnow();
 }
@@ -306,7 +342,7 @@ $("btn-email").addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(EMAIL);
   } catch (e) {
-    // Fallback solo si falla Clipboard API (permiso clipboardWrite ya declarado).
+    // Alternativa si falla Clipboard API. / Fallback if Clipboard API fails.
     const ta = document.createElement("textarea");
     ta.value = EMAIL;
     document.body.appendChild(ta);
@@ -320,7 +356,7 @@ $("btn-email").addEventListener("click", async () => {
   setTimeout(() => msg.classList.add("hidden"), 2500);
 });
 
-// Juego Shell: muestra el gato en las 3, tapa, mezcla con FLIP y elige.
+// Juego Shell: muestra, tapa, mezcla e invita a elegir. / Shell game: show, cover, shuffle and pick.
 const cups = Array.from(document.querySelectorAll(".cup"));
 const cupsBox = $("cups-box");
 
@@ -370,7 +406,7 @@ async function flipSwap(i, j) {
     el.style.transform = `translateX(${dx}px)`;
   }
   void cupsBox.offsetWidth;
-  // Las tazas recorren el intercambio una a la vez, no las tres al mismo tiempo.
+  // Intercambio secuencial de tazas. / Sequential cup swap.
   elA.style.zIndex = "2";
   elA.style.transition = "transform 0.22s cubic-bezier(.22,.8,.24,1)";
   elA.style.transform = "";

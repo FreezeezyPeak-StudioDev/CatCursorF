@@ -1,8 +1,7 @@
-"""Marca Freezeezy Peak.
-GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
-Correo: freezeezypeak.studiodev@gmail.com
+"""CatCursorF v1.0 - Freezeezy Peak.
+GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 
-Empaqueta CatCursorF en .xpi (rutas con / para Firefox).
+Empaqueta CatCursorF en .xpi (rutas con / para Firefox). / Packages CatCursorF as .xpi (paths with / for Firefox).
 """
 import zipfile
 from pathlib import Path

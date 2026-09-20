@@ -1,6 +1,6 @@
-// Marca Freezeezy Peak.
-// GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
-// Correo: freezeezypeak.studiodev@gmail.com
+// CatCursorF v1.0 - Freezeezy Peak.
+// Fondo: aplica/retira CSS de cursores y define valores iniciales. / Background: applies/removes cursor CSS and sets initial values.
+// GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 const cursoresAplicados = new Map();
 
 browser.runtime.onMessage.addListener(async (mensaje, origen) => {
@@ -9,13 +9,13 @@ browser.runtime.onMessage.addListener(async (mensaje, origen) => {
   const clave = `${origen.tab.id}:${marco}`;
   const anterior = cursoresAplicados.get(clave);
   if (anterior) {
-    try { await browser.tabs.removeCSS(origen.tab.id, { code: anterior, frameId: marco }); } catch (e) {}
+    try { await browser.scripting.removeCSS({ target: { tabId: origen.tab.id, frameIds: [marco] }, css: anterior }); } catch (e) {}
     cursoresAplicados.delete(clave);
   }
   if (mensaje.type === "cursor-aplicar" && typeof mensaje.css === "string") {
-    // Mejor esfuerzo: si falta permiso de host en la pestaña, el content script ya inyectó por DOM.
+    // Mejor esfuerzo: el content script ya inyecto por DOM si falta permiso de host. / Best effort: content script already injected via DOM if host permission is missing.
     try {
-      await browser.tabs.insertCSS(origen.tab.id, { code: mensaje.css, frameId: marco });
+      await browser.scripting.insertCSS({ target: { tabId: origen.tab.id, frameIds: [marco] }, css: mensaje.css });
       cursoresAplicados.set(clave, mensaje.css);
     } catch (e) {}
   }
@@ -27,7 +27,7 @@ browser.tabs.onRemoved.addListener((tabId) => {
   }
 });
 
-// CatCursorF: valores iniciales + tutorial de bienvenida al instalar.
+// Valores iniciales y tutorial de bienvenida al instalar. / Initial values and welcome tutorial on install.
 browser.runtime.onInstalled.addListener(async (details) => {
   if (details.reason !== "install") return;
   const cur = await browser.storage.local.get([
@@ -61,7 +61,7 @@ browser.runtime.onInstalled.addListener(async (details) => {
   browser.tabs.create({ url: browser.runtime.getURL("tutorial/tutorial.html") });
 });
 
-// Icono de la barra segun el tema elegido.
+// Icono de la barra segun el tema. / Toolbar icon by theme.
 const THEME_ICONS = {
   calc: "assets/icons/iconNormal.svg",
   win: "assets/icons/iconWin.svg",
@@ -73,7 +73,7 @@ const THEME_ICONS = {
 async function applyToolbarIcon() {
   try {
     const { theme } = await browser.storage.local.get("theme");
-    await browser.browserAction.setIcon({ path: THEME_ICONS[theme] || THEME_ICONS.calc });
+    await browser.action.setIcon({ path: THEME_ICONS[theme] || THEME_ICONS.calc });
   } catch (e) {}
 }
 browser.storage.onChanged.addListener((changes) => {

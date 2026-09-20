@@ -1,7 +1,6 @@
-// Marca Freezeezy Peak.
-// GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
-// Correo: freezeezypeak.studiodev@gmail.com
-// CatCursorF: tutorial con idioma desde _locales.
+// CatCursorF v1.0 - Freezeezy Peak.
+// Tutorial con idioma desde _locales. / Tutorial with locale from _locales.
+// GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 let lang = "es";
 let T = {};
 

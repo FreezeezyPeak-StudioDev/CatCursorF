@@ -1,7 +1,6 @@
-/* Marca Freezeezy Peak.
-   GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
-   Correo: freezeezypeak.studiodev@gmail.com */
-/* CatCursorF - sin fuentes externas, pila local */
+/* CatCursorF v1.0 - Freezeezy Peak.
+   GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com */
+/* Sin fuentes externas, pila local. / No external fonts, local stack. */
 * { box-sizing: border-box; image-rendering: pixelated; }
 
 body {
@@ -30,7 +29,7 @@ body p, body h1, body h2, body h3, body h4, body h5, body h6, body li, body pre,
 .note.center { text-align: center; }
 .lcd.big { font-size: 26px; padding: 12px 8px; }
 
-/* Legibilidad y transiciones */
+/* Legibilidad y transiciones / Readability and transitions */
 body { width: 372px !important; }
 .key { font-size: 12px !important; font-weight: bold; transition: transform 0.12s ease, background-color 0.15s ease, box-shadow 0.08s ease; }
 .key.power { min-height: 42px; padding: 5px !important; }
@@ -56,7 +55,7 @@ body { width: 372px !important; }
   .cup.mix { animation: none; }
 }
 
-/* Animaciones por codigo */
+/* Animaciones por codigo / Code-driven animations */
 .key:hover { filter: brightness(1.18); }
 .key.nav:hover { transform: translateY(-2px); }
 .brand-icon { animation: bob 2.4s ease-in-out infinite; }
@@ -85,7 +84,7 @@ body { width: 372px !important; }
 body.minimized .screen, body.minimized .footer { display: none; }
 body.minimized .calc { min-height: 76px; }
 
-/* Juego */
+/* Juego / Game */
 .betrow2 { display: grid; grid-template-columns: 44px 1fr 44px 64px; gap: 6px; align-items: stretch; margin: 8px 0; }
 .betinput { width: 100%; font: inherit; font-weight: bold; text-align: center; margin: 0; color: inherit; }
 #popup-snow { position: fixed; inset: 0; pointer-events: none; z-index: 99; overflow: hidden; }
@@ -170,7 +169,7 @@ body.theme-gd { background-color: #050510; background-image: linear-gradient(rgb
 .theme-gd .panel a { color: #7df3ff; }
 .theme-gd .footer { margin: 12px 0 0; text-align: center; font-size: 7px; color: #ff2fb3; }
 
-/* Acabados especiales: Minecraft y Geometry Dash */
+/* Acabados especiales: Minecraft y Geometry Dash / Special finishes: Minecraft and Geometry Dash */
 .theme-mc .calc { background-color: #9b7749; background-image: linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(rgba(0,0,0,.12) 1px, transparent 1px), repeating-linear-gradient(0deg, rgba(0,0,0,0) 0 16px, rgba(0,0,0,.18) 16px 19px); background-size: 8px 8px, 8px 8px, auto; }
 .theme-mc .key { background-image: linear-gradient(135deg, rgba(255,255,255,.16) 25%, transparent 25%), linear-gradient(#8f8f8f, #636363); background-size: 6px 6px, auto; }
 .theme-mc .key:hover { color: #fff6bd; background-image: linear-gradient(135deg, rgba(255,255,255,.16) 25%, transparent 25%), linear-gradient(#a8a8a8, #717171); }
@@ -180,7 +179,7 @@ body.theme-gd { background-color: #050510; background-image: linear-gradient(rgb
 .theme-gd .key:hover { color: #fff; box-shadow: 0 3px 0 #003a44, 0 0 10px rgba(0,229,255,.7); }
 .theme-gd .sec-title { text-shadow: 1px 1px 0 #fff; }
 
-/* Cambio de tema breve y suave. */
+/* Cambio de tema breve y suave. / Brief, smooth theme change. */
 body, .calc, .brand, .lcd, .sec-title, .key, .panel { transition: background-color .32s ease, background-image .32s ease, color .24s ease, border-color .32s ease, box-shadow .32s ease; }
 body.theme-switch .calc { animation: themeChange .42s ease; }
 @keyframes themeChange { 0% { opacity: .72; transform: scale(.985); } 100% { opacity: 1; transform: none; } }
