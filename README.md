@@ -68,7 +68,6 @@ CatCursorF/
 │ └── texturas/ # Elementos gráficos
 └── LICENSE # GPL v3
 
-
 ---
 
 ## Cómo Usar
