@@ -1,0 +1,24 @@
+/* Marca Freezeezy Peak.
+   GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
+   Correo: freezeezypeak.studiodev@gmail.com */
+/* CatCursorF: interfaz del navegador. Copiar con los 8 .cur a <perfil>/chrome/.
+   Requiere toolkit.legacyUserProfileCustomizations.stylesheets = true. */
+
+* {
+  cursor: url("Cat - Normal Select.cur"), auto !important;
+}
+
+a, .text-link, button, toolbarbutton,
+menu, menuitem, tab, richlistitem,
+#urlbar:not([focused]) {
+  cursor: url("Cat - Link Select B.cur"), pointer !important;
+}
+
+input, textbox, searchbar-textbox,
+#urlbar-input, #searchbar-input {
+  cursor: url("Cat - Pen.cur"), text !important;
+}
+
+[disabled="true"], [disabled] {
+  cursor: url("Cat - Unavailable.cur"), not-allowed !important;
+}

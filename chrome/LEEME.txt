@@ -1,0 +1,28 @@
+CAT CURSOR - cursor en TODA la interfaz de Firefox
+=====================================================
+La extension sola cubre todas las paginas web. Para que el
+gato tambien aparezca en barras, menus, pestanas y paginas
+internas (about:config, nueva pestana, etc.), haz esto UNA vez:
+
+Pasos (manual, una sola vez):
+
+1) En Firefox abre about:config, acepta el aviso y busca:
+     toolkit.legacyUserProfileCustomizations.stylesheets
+   Ponlo en true (doble clic).
+
+2) Abre about:support y junto a "Carpeta de perfil" pulsa
+   "Abrir carpeta".
+
+3) Ahi dentro crea una carpeta llamada:  chrome
+
+4) Copia DENTRO de esa carpeta chrome:
+   - userChrome.css   (este archivo va aqui mismo)
+   - userContent.css
+   - los 8 archivos .cur de assets/cursors/
+     (Cat - Normal Select.cur, Cat - Link Select B.cur, Cat - Text Select.cur, Cat - Help Select.cur, Cat - Pen.cur, Cat - Precision Select.cur, Cat - Unavailable.cur, Cat - Vertical Resize.cur)
+
+5) Reinicia Firefox por completo.
+
+Listo: el gato queda en todo momento, hasta en la interfaz.
+Para quitarlo, borra los archivos de la carpeta chrome o pon
+la preferencia del paso 1 en false.

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- Marca Freezeezy Peak.
+GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
+Correo: freezeezypeak.studiodev@gmail.com -->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body class="theme-calc">
+  <div class="calc">
+    <div class="brand">
+      <img id="brand-icon" class="brand-icon" src="../assets/icons/iconNormal.svg" alt="CatCursorF">
+      <span>CatCursorF v1.0</span>
+      <span class="org">Freezeezy Peak</span>
+      <button id="btn-minimize" class="popup-control" type="button" title="Minimizar" aria-label="Minimizar">−</button>
+    </div>
+
+    <!-- PRINCIPAL -->
+    <div id="screen-main" class="screen">
+      <div class="lcd"><span id="status">...</span></div>
+      <button id="btn-power" class="key power" type="button" title="Encender o apagar" aria-label="Encender o apagar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v10M6.35 5.35a9 9 0 1 0 11.3 0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"/></svg>
+      </button>
+      <div class="grid">
+        <button class="key nav" data-go="ajustes"><svg class="logo" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 1v2.6M8 12.4V15M1 8h2.6M12.4 8H15M3 3l1.8 1.8M11.2 11.2L13 13M13 3l-1.8 1.8M4.8 11.2L3 13" stroke="currentColor" stroke-width="1.6"/></svg><span data-i18n="settings">AJUSTES</span></button>
+        <button class="key nav" data-go="idioma"><img class="logo" src="../assets/texturas/ES-EN.png" alt="ES-EN"><span data-i18n="language">IDIOMA</span></button>
+        <button class="key nav" data-go="redes"><svg class="logo" viewBox="0 0 16 16"><circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 5.2L7 10M10.5 5.2L9 10M6 4h4" stroke="currentColor" stroke-width="1.2"/></svg><span data-i18n="networks">REDES</span></button>
+        <button class="key nav" data-go="mas"><svg class="logo" viewBox="0 0 16 16"><path d="M7 2h2v5h5v2H9v5H7V9H2V7h5z" fill="currentColor"/></svg><span data-i18n="more">MAS</span></button>
+        <button class="key nav" data-go="juego"><svg class="logo" viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="6" r="1.1" fill="currentColor"/><circle cx="10" cy="6" r="1.1" fill="currentColor"/><circle cx="6" cy="10" r="1.1" fill="currentColor"/><circle cx="10" cy="10" r="1.1" fill="currentColor"/></svg><span data-i18n="game">JUEGO</span></button>
+        <button id="btn-license" class="key"><svg class="logo" viewBox="0 0 16 16"><rect x="3" y="2" width="10" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 5.5h5M5.5 8h5M5.5 10.5h3" stroke="currentColor" stroke-width="1.2"/></svg><span data-i18n="license">LICENCIA</span></button>
+      </div>
+    </div>
+
+    <!-- AJUSTES -->
+    <div id="screen-ajustes" class="screen hidden">
+      <p class="sec-title" data-i18n="settings">AJUSTES</p>
+      <div class="grid">
+        <button id="btn-cursor" class="key">...</button>
+        <button id="btn-sound" class="key">...</button>
+      </div>
+      <p class="sec-title" data-i18n="festive">FESTIVO</p>
+      <div class="grid">
+        <button id="btn-festive" class="key"><svg class="logo" viewBox="0 0 16 16"><path d="M8 1v14M2 4.5l12 7M14 4.5L2 11.5" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="1.4" fill="currentColor"/></svg><span id="festive-label">...</span></button>
+        <button id="btn-stars" class="key">...</button>
+      </div>
+      <div class="grid">
+        <button id="btn-autotheme" class="key">...</button>
+        <button id="btn-resetall" class="key" data-i18n="resetAll">REINICIAR TODO</button>
+      </div>
+      <button class="key back" data-go="main" data-i18n="back">VOLVER</button>
+      <p class="sec-title" data-i18n="language">IDIOMA</p>
+      <div class="grid">
+        <button class="key lang-es"><img class="logo" src="../assets/texturas/ES.png" alt="ES">ES</button>
+        <button class="key lang-en"><img class="logo" src="../assets/texturas/EN.png" alt="EN">EN</button>
+      </div>
+      <p class="sec-title" data-i18n="themes">TEMAS</p>
+      <div class="grid">
+        <button class="key pick-calc" data-i18n="themeCalc">CALCULADORA</button>
+        <button class="key pick-win" data-i18n="themeWin">CLASICO</button>
+        <button class="key pick-mc" data-i18n="themeMc">MINECRAFT</button>
+        <button class="key pick-gd" data-i18n="themeGd">GEODASH</button>
+        <button class="key pick-nav" data-i18n="themeNav">NAVIDAD</button>
+        <button class="key pick-ny" data-i18n="themeNy">AÑO NUEVO</button>
+      </div>
+      <button class="key back" data-go="main" data-i18n="back">VOLVER</button>
+    </div>
+
+    <!-- IDIOMA -->
+    <div id="screen-idioma" class="screen hidden">
+      <p class="sec-title" data-i18n="language">IDIOMA</p>
+      <div class="grid">
+        <button class="key lang-es"><img class="logo" src="../assets/texturas/ES.png" alt="ES">ESPAÑOL</button>
+        <button class="key lang-en"><img class="logo" src="../assets/texturas/EN.png" alt="EN">ENGLISH</button>
+      </div>
+      <button class="key back" data-go="main" data-i18n="back">VOLVER</button>
+    </div>
+
+    <!-- REDES -->
+    <div id="screen-redes" class="screen hidden">
+      <p class="sec-title" data-i18n="networks">REDES</p>
+      <div class="grid">
+        <a class="key link" href="https://www.youtube.com/channel/UCpdyMbZpJakX0dRANaPMSOQ" target="_blank" rel="noopener">
+          <svg class="logo" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="1" y="3" width="14" height="10" rx="2" fill="#e62117"/><path d="M7 5.5 L11.5 8 L7 10.5 Z" fill="#fff"/></svg>YouTube</a>
+        <a class="key link" href="https://github.com/FreezeezyPeak-StudioDev" target="_blank" rel="noopener">
+          <svg class="logo" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" fill="#24292f"/><path d="M3 8 L3 4 L5.5 6 Q8 4.8 10.5 6 L13 4 L13 8 Q13 12 8 13 Q3 12 3 8Z" fill="#fff"/><rect x="5.5" y="8" width="1.6" height="1.6" fill="#24292f"/><rect x="8.9" y="8" width="1.6" height="1.6" fill="#24292f"/></svg>GitHub</a>
+        <a class="key link" href="https://gitlab.com/freezeezypeak.studiodev" target="_blank" rel="noopener">
+          <svg class="logo" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" fill="#e24329"/><path d="M2 4 L5 6 L8 5 L11 6 L14 4 L12 11 L8 13.5 L4 11Z" fill="#fff"/><path d="M6.5 9.5 L8 12 L9.5 9.5Z" fill="#e24329"/></svg>GitLab</a>
+        <button id="btn-email" class="key">
+          <svg class="logo" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" fill="#1a73e8"/><rect x="3" y="4.5" width="10" height="7" fill="#fff"/><path d="M3 4.5 L8 9 L13 4.5" stroke="#1a73e8" stroke-width="1.4" fill="none"/></svg>Email</button>
+        <a class="key link" href="https://addons.mozilla.org/es-ES/firefox/user/20170408/" target="_blank" rel="noopener">
+          <svg class="logo" viewBox="0 0 16 16" shape-rendering="crispEdges"><circle cx="8" cy="8" r="6.5" fill="#ff7139"/><path d="M8 1.5 Q11 5 11 8 Q11 11 8 14.5 Q5 11 5 8 Q5 5 8 1.5Z" fill="#0060df" opacity="0.85"/></svg>AMO</a>
+        <button class="key nav" data-go="web">
+          <svg class="logo" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" fill="#3a3a40"/><circle cx="8" cy="8" r="5.5" fill="none" stroke="#ffd94d" stroke-width="1.6"/><path d="M2.5 8 H13.5 M8 2.5 Q10.5 5.5 10.5 8 Q10.5 10.5 8 13.5 Q5.5 10.5 5.5 8 Q5.5 5.5 8 2.5Z" stroke="#ffd94d" stroke-width="1.2" fill="none"/></svg><span data-i18n="myweb">MI WEB</span></button>
+        <button class="key nav" data-go="itch">
+          <svg class="logo" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" rx="2" fill="#fa5c5c"/><text x="8" y="11.5" text-anchor="middle" font-size="6" font-weight="bold" fill="#fff">itch</text></svg><span data-i18n="itch">ITCH.IO</span></button>
+      </div>
+      <p id="email-msg" class="note center hidden">...</p>
+      <button class="key back" data-go="main" data-i18n="back">VOLVER</button>
+    </div>
+
+    <!-- MI WEB 404 -->
+    <div id="screen-web" class="screen hidden">
+      <p class="sec-title" data-i18n="myweb">MI WEB</p>
+      <div class="lcd big">404</div>
+      <p class="note center" data-i18n="webMsg">...</p>
+      <button class="key back" data-go="redes" data-i18n="back">VOLVER</button>
+    </div>
+
+    <!-- ITCH.IO 404 -->
+    <div id="screen-itch" class="screen hidden">
+      <p class="sec-title" data-i18n="itch">ITCH.IO</p>
+      <div class="lcd big">404</div>
+      <p class="note center" data-i18n="itchMsg">...</p>
+      <button class="key back" data-go="redes" data-i18n="back">VOLVER</button>
+    </div>
+
+    <!-- MAS -->
+    <div id="screen-mas" class="screen hidden">
+      <p class="sec-title" data-i18n="more">MAS</p>
+      <p class="note" data-i18n="moreNote">...</p>
+      <div class="grid">
+        <button id="btn-tutorial" class="key" data-i18n="tutorial">TUTORIAL</button>
+        <button id="credits-btn" class="key" data-i18n="credits">CREDITOS</button>
+      </div>
+      <p class="note center" data-i18n="gpl">Licencia: GPL v3</p>
+      <div id="credits" class="panel hidden">
+        <div id="credits-body">...</div>
+        <button id="readme-btn" class="key" data-i18n="readme">VER README</button>
+        <pre id="readme" class="reader hidden">...</pre>
+        <button id="btn-fullcredits" class="key" data-i18n="fullCredits">VER COMPLETO</button>
+      </div>
+      <button class="key back" data-go="main" data-i18n="back">VOLVER</button>
+    </div>
+
+    <!-- JUEGO SHELL -->
+    <div id="screen-juego" class="screen hidden">
+      <p class="sec-title" data-i18n="game">JUEGO</p>
+      <div id="g-loader" class="game-overlay hidden" role="status" aria-live="polite">
+        <div class="loader-cat">🐱</div>
+        <strong>Preparando las tazas…</strong>
+        <span>Encuentra al gato.</span>
+      </div>
+      <div class="lcd"><span data-i18n="money">Dinero</span>: $<span id="g-money">25.00</span></div>
+      <div class="lcd small" id="g-stats">...</div>
+      <div class="lcd small" id="g-debt">...</div>
+      <div class="betrow2">
+        <button id="g-minus" class="key small">-</button>
+        <input id="g-betinput" class="lcd betinput" type="number" min="0" step="1" value="2">
+        <button id="g-plus" class="key small">+</button>
+        <button id="g-allin" class="key small" data-i18n="allin">TODO</button>
+      </div>
+      <p id="g-msg" class="note center">...</p>
+      <div class="cups" id="cups-box">
+        <button class="key cup" data-cup="0"><svg class="cuptop" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="1" width="12" height="2" fill="currentColor"/><path d="M4 3 H12 L10.5 14 H5.5 Z" fill="currentColor"/></svg><span class="catobj"><svg viewBox="0 0 24 24"><circle cx="12" cy="14" r="8" fill="#e8912d"/><polygon points="6,10 4,2 11,7" fill="#e8912d"/><polygon points="18,10 20,2 13,7" fill="#e8912d"/><circle cx="9" cy="13" r="1.5" fill="#222"/><circle cx="15" cy="13" r="1.5" fill="#222"/><path d="M10 17 Q12 19 14 17" stroke="#5c2d00" stroke-width="1.2" fill="none"/></svg></span></button>
+        <button class="key cup" data-cup="1"><svg class="cuptop" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="1" width="12" height="2" fill="currentColor"/><path d="M4 3 H12 L10.5 14 H5.5 Z" fill="currentColor"/></svg><span class="catobj"><svg viewBox="0 0 24 24"><circle cx="12" cy="14" r="8" fill="#e8912d"/><polygon points="6,10 4,2 11,7" fill="#e8912d"/><polygon points="18,10 20,2 13,7" fill="#e8912d"/><circle cx="9" cy="13" r="1.5" fill="#222"/><circle cx="15" cy="13" r="1.5" fill="#222"/><path d="M10 17 Q12 19 14 17" stroke="#5c2d00" stroke-width="1.2" fill="none"/></svg></span></button>
+        <button class="key cup" data-cup="2"><svg class="cuptop" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="1" width="12" height="2" fill="currentColor"/><path d="M4 3 H12 L10.5 14 H5.5 Z" fill="currentColor"/></svg><span class="catobj"><svg viewBox="0 0 24 24"><circle cx="12" cy="14" r="8" fill="#e8912d"/><polygon points="6,10 4,2 11,7" fill="#e8912d"/><polygon points="18,10 20,2 13,7" fill="#e8912d"/><circle cx="9" cy="13" r="1.5" fill="#222"/><circle cx="15" cy="13" r="1.5" fill="#222"/><path d="M10 17 Q12 19 14 17" stroke="#5c2d00" stroke-width="1.2" fill="none"/></svg></span></button>
+      </div>
+      <div id="g-gameover" class="gameover-panel hidden" aria-live="polite">
+        <span class="gameover-icon">☹</span>
+        <strong>GAME OVER</strong>
+        <span>Te quedaste sin dinero.</span>
+        <button id="g-retry" class="key retry" data-i18n="retry">REINTENTAR</button>
+      </div>
+      <div class="grid">
+        <button id="g-play" class="key"><svg class="logo" viewBox="0 0 16 16"><path d="M5 3l8 5-8 5z" fill="currentColor"/></svg><span data-i18n="play">JUGAR</span></button>
+        <button id="g-work" class="key"><svg class="logo" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#ffd94d" stroke="#8a6d00" stroke-width="1.4"/><text x="8" y="11.2" text-anchor="middle" font-size="8" font-weight="bold" fill="#8a6d00">$</text></svg><span data-i18n="work">TRABAJAR +0.25</span></button>
+      </div>
+      <p class="sec-title" data-i18n="loan">PRESTAMO</p>
+      <div class="grid">
+        <button id="g-loan10" class="key small">+10$</button>
+        <button id="g-loan50" class="key small">+50$</button>
+        <button id="g-loan100" class="key small">+100$</button>
+        <button id="g-repay" class="key small" data-i18n="repay">PAGAR</button>
+      </div>
+      <p class="sec-title" data-i18n="statueT">ESTATUA 1M$</p>
+      <div class="lcd small" id="g-goal">...</div>
+      <button id="g-buy" class="key" data-i18n="buy">COMPRAR</button>
+      <button id="g-resetgame" class="key" data-i18n="resetGame">REINICIAR JUEGO</button>
+      <button class="key back" data-go="main" data-i18n="back">VOLVER</button>
+    </div>
+
+    <p class="footer">Freezeezy Peak</p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

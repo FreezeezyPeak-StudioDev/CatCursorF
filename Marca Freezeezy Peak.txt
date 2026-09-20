@@ -1,0 +1,20 @@
+Marca Freezeezy Peak
+====================
+
+JavaScript:
+// Marca Freezeezy Peak.
+// GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
+// Correo: freezeezypeak.studiodev@gmail.com
+
+CSS:
+/* Marca Freezeezy Peak.
+   GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
+   Correo: freezeezypeak.studiodev@gmail.com */
+
+HTML:
+<!-- Marca Freezeezy Peak.
+GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
+Correo: freezeezypeak.studiodev@gmail.com -->
+
+Uso: colocar una sola vez al inicio de cada archivo propio de Freezeezy Peak.
+No elimina ni sustituye las atribuciones de recursos de terceros.

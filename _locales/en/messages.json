@@ -1,0 +1,278 @@
+{
+  "settings": {
+    "message": "SETTINGS"
+  },
+  "language": {
+    "message": "LANGUAGE"
+  },
+  "networks": {
+    "message": "NETWORKS"
+  },
+  "more": {
+    "message": "MORE"
+  },
+  "game": {
+    "message": "GAME"
+  },
+  "help": {
+    "message": "HELP"
+  },
+  "credits": {
+    "message": "CREDITS"
+  },
+  "tutorial": {
+    "message": "TUTORIAL"
+  },
+  "back": {
+    "message": "< BACK"
+  },
+  "themes": {
+    "message": "THEMES"
+  },
+  "festive": {
+    "message": "HOLIDAY"
+  },
+  "themeCalc": {
+    "message": "CALCULATOR"
+  },
+  "themeWin": {
+    "message": "CLASSIC"
+  },
+  "themeMc": {
+    "message": "MINECRAFT"
+  },
+  "themeGd": {
+    "message": "GEODASH"
+  },
+  "themeNav": {
+    "message": "CHRISTMAS"
+  },
+  "themeNy": {
+    "message": "NEW YEAR"
+  },
+  "myweb": {
+    "message": "MY WEB"
+  },
+  "webMsg": {
+    "message": "ERROR 404: the website isn't ready yet. Stay tuned to my networks for updates."
+  },
+  "statusOn": {
+    "message": "● ENABLED"
+  },
+  "statusOff": {
+    "message": "○ DISABLED"
+  },
+  "stCursorOff": {
+    "message": "ON / CURSOR OFF"
+  },
+  "stFxOff": {
+    "message": "ON / FX OFF"
+  },
+  "stAllOff": {
+    "message": "ON / ALL OFF"
+  },
+  "powerOn": {
+    "message": "TURN OFF"
+  },
+  "powerOff": {
+    "message": "TURN ON"
+  },
+  "cursor": {
+    "message": "Cursor"
+  },
+  "sound": {
+    "message": "Sound"
+  },
+  "fxAuto": {
+    "message": "Holiday: AUTO"
+  },
+  "fxAlways": {
+    "message": "Holiday: ALWAYS"
+  },
+  "fxOff": {
+    "message": "Holiday: OFF"
+  },
+  "copied": {
+    "message": "Copied to clipboard for your use."
+  },
+  "money": {
+    "message": "Money"
+  },
+  "bet": {
+    "message": "Bet"
+  },
+  "play": {
+    "message": "PLAY"
+  },
+  "work": {
+    "message": "WORK +0.25"
+  },
+  "win": {
+    "message": "YOU WIN +"
+  },
+  "lose": {
+    "message": "You lose. Try again."
+  },
+  "pick": {
+    "message": "Pick a cup..."
+  },
+  "watch": {
+    "message": "Watch where the cat goes..."
+  },
+  "mixing": {
+    "message": "Shuffling..."
+  },
+  "sWon": {
+    "message": "WON"
+  },
+  "sLost": {
+    "message": "LOST"
+  },
+  "sStreak": {
+    "message": "STREAK"
+  },
+  "debtL": {
+    "message": "Debt"
+  },
+  "loan": {
+    "message": "LOAN"
+  },
+  "repay": {
+    "message": "REPAY"
+  },
+  "gameover": {
+    "message": "GAME OVER: unpaid debt. Starting over."
+  },
+  "itch": {
+    "message": "ITCH.IO"
+  },
+  "itchMsg": {
+    "message": "ERROR 404: my itch.io page isn't ready yet. Stay tuned to my networks for updates."
+  },
+  "readme": {
+    "message": "VIEW README"
+  },
+  "moreNote": {
+    "message": "The .cur files and click sound are NOT mine: they belong to their authors (see Credits)."
+  },
+  "creditsHtml": {
+    "message": "<p><img class=\"org-logo\" src=\"../assets/texturas/logo_freezeezy peak_HD.png\" alt=\"Freezeezy Peak\"><br><b>CatCursorF:</b> Freezeezy Peak<br>Systems Engineer<br><a href=\"mailto:freezeezypeak.studiodev@gmail.com\">freezeezypeak.studiodev@gmail.com</a></p><p><b>Textures (.cur):</b> DUCK_BERET (CassMakesGames)<br>Creator website: <a href=\"https://ctmatthews.itch.io/\" target=\"_blank\" rel=\"noopener\">ctmatthews.itch.io</a><br>(see assets/cursors/README.txt)</p><p><b>FX Meow \"Cat_meow\":</b> Freezeezy Peak (own).</p><p><b>FX Click:</b> matthewvakaliuk73627 via <a href=\"https://pixabay.com/es/users/matthewvakaliuk73627-48347364/\" target=\"_blank\" rel=\"noopener\">Pixabay</a>.</p>"
+  },
+  "t1t": {
+    "message": "1. Your cat cursor"
+  },
+  "t1b": {
+    "message": "When enabled, every web page uses the 8 cat cursors: normal everywhere, click on links and buttons, pen on text fields, text on editable areas, help, precision on canvas, vertical resize on numbers and unavailable on disabled items. Clicks play a click sound and, rarely (8%), a meow."
+  },
+  "t2t": {
+    "message": "2. Pin it for quick access"
+  },
+  "t2b": {
+    "message": "Step 1: click the extensions button (puzzle piece) in the Firefox toolbar. Step 2: find CatCursorF in the list. Step 3: click the gear next to it and choose Pin to Toolbar. The icon stays fixed, one click away."
+  },
+  "t3t": {
+    "message": "3. Master power and states"
+  },
+  "t3b": {
+    "message": "The main menu has the master power button and a display showing the state: DISABLED (all off), ENABLED (all on), ON / CURSOR OFF (sound only), ON / FX OFF (cursor only) or ON / ALL OFF. Cursor and sound can also be toggled separately in SETTINGS."
+  },
+  "t4t": {
+    "message": "4. Settings, language and themes"
+  },
+  "t4b": {
+    "message": "SETTINGS holds: Cursor ON/OFF, Sound ON/OFF, Holiday AUTO/ALWAYS/OFF (snow at Christmas, gold at New Year), ES/EN Language and 6 Themes: Calculator, Classic, Minecraft, GeoDash, Christmas and New Year. The toolbar icon follows the theme. Language can also be switched from the menu LANGUAGE button."
+  },
+  "t5t": {
+    "message": "5. Networks, My Web and email"
+  },
+  "t5b": {
+    "message": "NETWORKS holds only personal links: YouTube, GitHub, GitLab, Email, AMO (Firefox profile) and My Web. The Email button copies the address to the clipboard and confirms. My Web shows 404 because it is not ready yet: stay tuned to the networks for updates."
+  },
+  "t6t": {
+    "message": "6. Shell cup game"
+  },
+  "t6b": {
+    "message": "GAME shows your money (you start with $$25). Type your bet or use -/+, ALL IN for everything, 0 allowed. Press PLAY, watch the cat, follow the shuffle and pick: win pays double. WORK gives +$$0.25 per click. Loans of 10/50/100 with REPAY; hitting 0 is GAME OVER and restarts. The goal: the $$1,000,000 cat statue."
+  },
+  "t7t": {
+    "message": "7. Cursor on home and settings"
+  },
+  "t7b": {
+    "message": "Firefox blocks extensions on its internal pages (home, settings). To get the cat there too, follow chrome/LEEME.txt in the project folder (copy 2 CSS files and the .cur files to the profile and enable one preference), then restart Firefox. Replay this tutorial anytime from MORE - TUTORIAL."
+  },
+  "ok": {
+    "message": "ACCEPT"
+  },
+  "skip": {
+    "message": "SKIP"
+  },
+  "allin": {
+    "message": "ALL IN"
+  },
+  "statueT": {
+    "message": "STATUE $$1M"
+  },
+  "goal": {
+    "message": "Goal"
+  },
+  "buy": {
+    "message": "BUY"
+  },
+  "owned": {
+    "message": "Owned"
+  },
+  "victory": {
+    "message": "STATUE BOUGHT! You are a legend."
+  },
+  "stars": {
+    "message": "Stars"
+  },
+  "autotheme": {
+    "message": "Auto theme"
+  },
+  "fullCredits": {
+    "message": "VIEW FULL"
+  },
+  "license": {
+    "message": "LICENSE"
+  },
+  "resetAll": {
+    "message": "RESET ALL"
+  },
+  "resetGame": {
+    "message": "RESET GAME"
+  },
+  "gpl": {
+    "message": "License: GPL v3"
+  },
+  "retry": {
+    "message": "RETRY"
+  },
+  "asklang": {
+    "message": "Elige tu idioma / Choose your language"
+  },
+  "crTitle": {
+    "message": "FULL CREDITS"
+  },
+  "crMineT": {
+    "message": "My own work (Freezeezy Peak)"
+  },
+  "crThirdT": {
+    "message": "Third-party (NOT mine)"
+  },
+  "crMineB": {
+    "message": "<p><b>CatCursorF</b> (Freezeezy Peak): extension, retro menu with 6 themes, Shell game with economy, snow/gold holiday effect, Cat_meow meow and cursors on popup and pages.</p><p><b>Logo:</b> Freezeezy Peak mountain (own).</p><p><b>Theme cats and menu icons:</b> drawn for this extension.</p>"
+  },
+  "crThirdB": {
+    "message": "<p><b>.cur textures:</b> DUCK_BERET (CassMakesGames). Website: ctmatthews.itch.io. See README in credits.</p><p><b>Click sound:</b> matthewvakaliuk73627 via Pixabay.</p><p><b>YouTube, GitHub, GitLab, AMO and itch.io brands:</b> owned by their owners; used only as links.</p>"
+  },
+  "crLic": {
+    "message": "Personal use. The .cur files and click belong to their authors."
+  },
+  "licTitle": {
+    "message": "CatCursorF LICENSE"
+  },
+  "licBody": {
+    "message": "<h2>CATCURSORF - Firefox Cursor Extension</h2><p><b>Description:</b> replaces browser cursors with custom cats. 8 contextual cursors, sounds, visual themes, interactive game and bilingual support.</p><h2>Features</h2><p>8 cat cursors · sounds (8% meow + click) · 6 visual themes · live settings panel · Shell game (free bets, work, loans, statue) · automatic holiday effects · ES/EN · works on websites, iframes and special pages · all local.</p><h2>Requirements</h2><p>Firefox 109+. Windows 7+ and Linux. About 3 MB.</p><h2>Install</h2><p>Development: about:debugging, This Firefox, Load Temporary Add-on, CatCursorF folder. Public: addons.mozilla.org, search CatCursorF, Add to Firefox.</p><h2>Project structure</h2><p>manifest.json · background.js · content.js · popup/ · tutorial/ · creditos/ · licencia/ · _locales/es+en/ · assets/{cursors, fx, icons, texturas} · chrome/ · versiones/ · build.py</p><h2>Usage guide</h2><p>Cat icon: master power and states on the display. SETTINGS: cursor, sound, holiday, stars, auto theme, language and 6 themes. LANGUAGE: instant ES/EN. NETWORKS: YouTube, GitHub, GitLab, email, AMO, My Web and itch.io. MORE: tutorial, credits and README. LICENSE: this text. GAME: bet anything (0 allowed, ALL IN for everything), win double, work +0.25, 10/50/100 loans, 0 is game over; goal: $$1,000,000 statue.</p><h2>Cursor system</h2><p>Normal, Link, Pen, Text, Help, Unavailable, Precision and Vertical, depending on element context.</p><h2>Audio effects</h2><p>Click on every click (Pixabay). 8% meow per click (own). Snow Nov 25-Jan 25 and gold Dec 31/Jan 1, disableable; hidden on video and fullscreen.</p><h2>Permissions</h2><p>Minimal: websites &lt;all_urls&gt; (cursors), local storage (settings), tabs (tutorial) and clipboard (copy email). No history, passwords or personal data.</p><h2>Troubleshooting</h2><p>No cursor: F5 and check ON. No sound: volume and SETTINGS. Home/settings: install chrome/LEEME.txt, enable the preference and restart. Temporary unloads on close: reload in about:debugging. Game data is local, lost when clearing cache.</p><h2>Visual themes</h2><p>Calculator (retro), Classic (neutral), Minecraft (blocks), GeoDash (neon), Christmas (red/green/gold) and New Year (gold).</p><h2>Technical info</h2><p>JavaScript, HTML5, CSS3, WebExtensions API. .cur cursors, MP3 audio, local storage. ES/EN. Firefox 109+ on Windows and Linux.</p><h2>Credits</h2><p>Cursors: DUCK_BERET, from Hyper Bun Buster (ctmatthews.itch.io/polite-cat-mouse-cursor). Click: Pixabay. Meow: original Freezeezy Peak. Development: Freezeezy Peak.</p><h2>GPL v3 License</h2><p>Allowed: personal and commercial use, modify and distribute. Required: credit Freezezy Peak, document changes and same license. Forbidden: claiming authorship, selling without authorization or removing credits. Contact: official Freezezy Peak channels.</p><h2>Contact</h2><p>Freezezy Peak: GitHub, YouTube, GitLab, itch.io. Bugs or suggestions: GitHub Issues.</p><h2>History</h2><p>V1.0: updated license, statue game, 6 themes, smart holiday FX. VERSION: 1.0 · DATE: 2026-09-18 · Freezezy Peak.</p>"
+  }
+}

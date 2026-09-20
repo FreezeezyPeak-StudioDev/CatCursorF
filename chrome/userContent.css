@@ -1,0 +1,33 @@
+/* Marca Freezeezy Peak.
+   GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev
+   Correo: freezeezypeak.studiodev@gmail.com */
+/* CatCursorF: paginas internas. Copiar con los 8 .cur a <perfil>/chrome/. */
+
+html, body, html *, body * {
+  cursor: url("Cat - Normal Select.cur"), auto !important;
+}
+a, a *, button, button *,
+input[type="button"], input[type="submit"], input[type="reset"], input[type="image"],
+[role="button"], [role="link"], summary, label[for] {
+  cursor: url("Cat - Link Select B.cur"), pointer !important;
+}
+input[type="text"], input[type="search"], input[type="url"],
+input[type="email"], input[type="password"], input[type="tel"], input:not([type]) {
+  cursor: url("Cat - Pen.cur"), text !important;
+}
+textarea, [contenteditable="true"], [contenteditable=""], pre, code,
+p, h1, h2, h3, h4, h5, h6, li, blockquote, article, main {
+  cursor: url("Cat - Text Select.cur"), text !important;
+}
+abbr[title], dfn[title] {
+  cursor: url("Cat - Help Select.cur"), help !important;
+}
+:disabled, [disabled], [aria-disabled="true"] {
+  cursor: url("Cat - Unavailable.cur"), not-allowed !important;
+}
+canvas {
+  cursor: url("Cat - Precision Select.cur"), crosshair !important;
+}
+input[type="number"] {
+  cursor: url("Cat - Vertical Resize.cur"), ns-resize !important;
+}

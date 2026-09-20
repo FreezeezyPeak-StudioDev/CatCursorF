@@ -1,0 +1,278 @@
+{
+  "settings": {
+    "message": "AJUSTES"
+  },
+  "language": {
+    "message": "IDIOMA"
+  },
+  "networks": {
+    "message": "REDES"
+  },
+  "more": {
+    "message": "MAS"
+  },
+  "game": {
+    "message": "JUEGO"
+  },
+  "help": {
+    "message": "AYUDA"
+  },
+  "credits": {
+    "message": "CREDITOS"
+  },
+  "tutorial": {
+    "message": "TUTORIAL"
+  },
+  "back": {
+    "message": "< VOLVER"
+  },
+  "themes": {
+    "message": "TEMAS"
+  },
+  "festive": {
+    "message": "FESTIVO"
+  },
+  "themeCalc": {
+    "message": "CALCULADORA"
+  },
+  "themeWin": {
+    "message": "CLASICO"
+  },
+  "themeMc": {
+    "message": "MINECRAFT"
+  },
+  "themeGd": {
+    "message": "GEODASH"
+  },
+  "themeNav": {
+    "message": "NAVIDAD"
+  },
+  "themeNy": {
+    "message": "AÑO NUEVO"
+  },
+  "myweb": {
+    "message": "MI WEB"
+  },
+  "webMsg": {
+    "message": "ERROR 404: la web aun no esta lista. Estate atento a las redes para actualizaciones."
+  },
+  "statusOn": {
+    "message": "● ACTIVO"
+  },
+  "statusOff": {
+    "message": "○ APAGADO"
+  },
+  "stCursorOff": {
+    "message": "ENCENDIDO / CURSOR OFF"
+  },
+  "stFxOff": {
+    "message": "ENCENDIDO / FX OFF"
+  },
+  "stAllOff": {
+    "message": "ENCENDIDO / TODO OFF"
+  },
+  "powerOn": {
+    "message": "APAGAR"
+  },
+  "powerOff": {
+    "message": "ENCENDER"
+  },
+  "cursor": {
+    "message": "Cursor"
+  },
+  "sound": {
+    "message": "Sonido"
+  },
+  "fxAuto": {
+    "message": "Festivo: AUTO"
+  },
+  "fxAlways": {
+    "message": "Festivo: SIEMPRE"
+  },
+  "fxOff": {
+    "message": "Festivo: OFF"
+  },
+  "copied": {
+    "message": "Copiado al portapapeles para su uso."
+  },
+  "money": {
+    "message": "Dinero"
+  },
+  "bet": {
+    "message": "Apuesta"
+  },
+  "play": {
+    "message": "JUGAR"
+  },
+  "work": {
+    "message": "TRABAJAR +0.25"
+  },
+  "win": {
+    "message": "GANASTE +"
+  },
+  "lose": {
+    "message": "Perdiste. Prueba otra vez."
+  },
+  "pick": {
+    "message": "Elige una taza..."
+  },
+  "watch": {
+    "message": "Mira donde queda el gato..."
+  },
+  "mixing": {
+    "message": "Mezclando..."
+  },
+  "sWon": {
+    "message": "GANADAS"
+  },
+  "sLost": {
+    "message": "PERDIDAS"
+  },
+  "sStreak": {
+    "message": "RACHA"
+  },
+  "debtL": {
+    "message": "Deuda"
+  },
+  "loan": {
+    "message": "PRESTAMO"
+  },
+  "repay": {
+    "message": "PAGAR"
+  },
+  "gameover": {
+    "message": "GAME OVER: deuda impaga. Empezando de nuevo."
+  },
+  "itch": {
+    "message": "ITCH.IO"
+  },
+  "itchMsg": {
+    "message": "ERROR 404: mi pagina de itch.io aun no esta lista. Estate atento a las redes para actualizaciones."
+  },
+  "readme": {
+    "message": "VER README"
+  },
+  "moreNote": {
+    "message": "Los .cur y el sonido de clic NO son mios: pertenecen a sus autores (ver Creditos)."
+  },
+  "creditsHtml": {
+    "message": "<p><img class=\"org-logo\" src=\"../assets/texturas/logo_freezeezy peak_HD.png\" alt=\"Freezeezy Peak\"><br><b>CatCursorF:</b> Freezeezy Peak<br>Ingeniero en Sistemas<br><a href=\"mailto:freezeezypeak.studiodev@gmail.com\">freezeezypeak.studiodev@gmail.com</a></p><p><b>Texturas (.cur):</b> DUCK_BERET (CassMakesGames)<br>Web del creador: <a href=\"https://ctmatthews.itch.io/\" target=\"_blank\" rel=\"noopener\">ctmatthews.itch.io</a><br>(ver assets/cursors/README.txt)</p><p><b>FX Maullido \"Cat_meow\":</b> Freezeezy Peak (propio).</p><p><b>FX Clic:</b> matthewvakaliuk73627 via <a href=\"https://pixabay.com/es/users/matthewvakaliuk73627-48347364/\" target=\"_blank\" rel=\"noopener\">Pixabay</a>.</p>"
+  },
+  "t1t": {
+    "message": "1. Tu cursor gato"
+  },
+  "t1b": {
+    "message": "Al activar la extension, todas las paginas web usan los 8 cursores de gato: normal para todo, clic en links y botones, lapiz en campos de texto, texto en zonas editables, ayuda, precision en canvas, redimension vertical en numeros y no disponible en deshabilitados. Al hacer clic suena un clic y, de vez en cuando (8%), un maullido."
+  },
+  "t2t": {
+    "message": "2. Anclarla para acceso rapido"
+  },
+  "t2b": {
+    "message": "Paso 1: pulsa el boton de extensiones (pieza de puzzle) en la barra de Firefox. Paso 2: busca CatCursorF en la lista. Paso 3: pulsa el engranaje junto a ella y elige Anclar a la barra de herramientas. Asi el icono queda fijo y abres el menu con un clic."
+  },
+  "t3t": {
+    "message": "3. Apagado total y estados"
+  },
+  "t3b": {
+    "message": "El menu principal tiene el boton de encendido total y una pantalla que muestra el estado: APAGADO (todo off), ACTIVO (todo on), ENCENDIDO / CURSOR OFF (solo suena), ENCENDIDO / FX OFF (solo cursor) o ENCENDIDO / TODO OFF. El cursor y el sonido tambien se controlan por separado en AJUSTES."
+  },
+  "t4t": {
+    "message": "4. Ajustes, idioma y temas"
+  },
+  "t4b": {
+    "message": "En AJUSTES estan: Cursor ON/OFF, Sonido ON/OFF, Festivo AUTO/SIEMPRE/OFF (nieve en navidad y dorado en año nuevo), Idioma ES/EN y 6 Temas: Calculadora, Clasico, Minecraft, GeoDash, Navidad y Año Nuevo. El icono de la barra cambia segun el tema. El idioma se cambia tambien desde el boton IDIOMA del menu."
+  },
+  "t5t": {
+    "message": "5. Redes, Mi Web y correo"
+  },
+  "t5b": {
+    "message": "En REDES estan solo las redes personales: YouTube, GitHub, GitLab, Email, AMO (perfil de Firefox) y Mi Web. El boton Email copia el correo al portapapeles y avisa. Mi Web muestra 404 porque aun no esta lista: estate atento a las redes para actualizaciones."
+  },
+  "t6t": {
+    "message": "6. Juego Shell de las tazas"
+  },
+  "t6b": {
+    "message": "En JUEGO ves tu dinero (empiezas con 25$$). Escribe tu apuesta o usa -/+, TODO para todo y 0 permitido. Pulsa JUGAR, mira donde queda el gato, sigue la mezcla y elige: si aciertas ganas el doble. TRABAJAR da +0.25$$ por clic. Préstamos de 10/50/100 con PAGAR; si llegas a 0 es GAME OVER y se reinicia. La meta: la estatua de gato de 1,000,000$$."
+  },
+  "t7t": {
+    "message": "7. Cursor en home y ajustes"
+  },
+  "t7b": {
+    "message": "Firefox bloquea a las extensiones en sus paginas internas (home, ajustes). Para tener el gato tambien ahi, sigue el archivo chrome/LEEME.txt de la carpeta del proyecto (copiar 2 CSS y los .cur al perfil y activar una preferencia) y reinicia Firefox. Puedes repetir este tutorial cuando quieras desde MAS - TUTORIAL."
+  },
+  "ok": {
+    "message": "ACEPTAR"
+  },
+  "skip": {
+    "message": "OMITIR"
+  },
+  "allin": {
+    "message": "TODO"
+  },
+  "statueT": {
+    "message": "ESTATUA 1M$$"
+  },
+  "goal": {
+    "message": "Meta"
+  },
+  "buy": {
+    "message": "COMPRAR"
+  },
+  "owned": {
+    "message": "Comprada"
+  },
+  "victory": {
+    "message": "¡ESTATUA COMPRADA! Eres leyenda."
+  },
+  "stars": {
+    "message": "Estrellas"
+  },
+  "autotheme": {
+    "message": "Tema auto"
+  },
+  "fullCredits": {
+    "message": "VER COMPLETO"
+  },
+  "license": {
+    "message": "LICENCIA"
+  },
+  "resetAll": {
+    "message": "REINICIAR TODO"
+  },
+  "resetGame": {
+    "message": "REINICIAR JUEGO"
+  },
+  "gpl": {
+    "message": "Licencia: GPL v3"
+  },
+  "retry": {
+    "message": "REINTENTAR"
+  },
+  "asklang": {
+    "message": "Elige tu idioma / Choose your language"
+  },
+  "crTitle": {
+    "message": "CRÉDITOS COMPLETOS"
+  },
+  "crMineT": {
+    "message": "De mi autoría (Freezeezy Peak)"
+  },
+  "crThirdT": {
+    "message": "De terceros (NO es mío)"
+  },
+  "crMineB": {
+    "message": "<p><b>CatCursorF</b> (Freezeezy Peak): extensión, menú retro con 6 temas, juego Shell con economía, efecto festivo de nieve/dorado, maullido Cat_meow y cursores en popup y páginas.</p><p><b>Logo:</b> montaña Freezeezy Peak (propio).</p><p><b>Gatos por tema e iconos del menú:</b> dibujados para esta extensión.</p>"
+  },
+  "crThirdB": {
+    "message": "<p><b>Texturas .cur:</b> DUCK_BERET (CassMakesGames). Web: ctmatthews.itch.io. Ver README en créditos.</p><p><b>Sonido de clic:</b> matthewvakaliuk73627 vía Pixabay.</p><p><b>Marcas YouTube, GitHub, GitLab, AMO e itch.io:</b> de sus dueños; usadas solo como enlaces.</p>"
+  },
+  "crLic": {
+    "message": "Uso personal. Los .cur y el clic pertenecen a sus autores."
+  },
+  "licTitle": {
+    "message": "LICENCIA CatCursorF"
+  },
+  "licBody": {
+    "message": "<h2>CATCURSORF - Extensión de Cursor Firefox</h2><p><b>Descripción:</b> reemplaza los cursores del navegador con gatos personalizados. 8 cursores contextuales, sonidos, temas visuales, juego interactivo y soporte bilingüe.</p><h2>Características</h2><p>8 cursores de gato · sonidos (maullido 8% + clic) · 6 temas visuales · panel con ajustes en tiempo real · juego Shell (apuestas libres, trabajo, préstamos, estatua) · efectos festivos automáticos · ES/EN · funciona en webs, iframes y páginas especiales · todo local.</p><h2>Requisitos técnicos</h2><p>Firefox 109 o superior. Windows 7+ y Linux. Unos 3 MB.</p><h2>Instalación</h2><p>Desarrollo: about:debugging, Este Firefox, Cargar extensión temporal, carpeta CatCursorF. Pública: addons.mozilla.org, buscar CatCursorF, Agregar a Firefox.</p><h2>Estructura del proyecto</h2><p>manifest.json · background.js · content.js · popup/ · tutorial/ · creditos/ · licencia/ · _locales/es+en/ · assets/{cursors, fx, icons, texturas} · chrome/ · versiones/ · build.py</p><h2>Guía de uso</h2><p>Icono gato: apagado total y estados en la pantalla. AJUSTES: cursor, sonido, festivo, estrellas, tema auto, idioma y 6 temas. IDIOMA: ES/EN instantáneo. REDES: YouTube, GitHub, GitLab, correo, AMO, Mi Web e itch.io. MÁS: tutorial, créditos y README. LICENCIA: este texto. JUEGO: apuesta lo que quieras (0 permitido, TODO para todo), gana el doble, trabaja +0.25, préstamos 10/50/100, a 0 es game over; meta: estatua de 1,000,000$$.</p><h2>Sistema de cursores</h2><p>Normal, Link, Pen, Text, Help, Unavailable, Precision y Vertical, según el contexto del elemento.</p><h2>Efectos de audio</h2><p>Clic en cada clic (Pixabay). Maullido 8% por clic (propio). Nieve 25 nov-25 ene y dorado 31 dic/1 ene, desactivables; se ocultan en video y pantalla completa.</p><h2>Permisos</h2><p>Mínimos: webs &lt;all_urls&gt; (cursores), storage local (ajustes), tabs (tutorial) y portapapeles (copiar email). Nada de historial, contraseñas ni datos personales.</p><h2>Solución de problemas</h2><p>Sin cursor: F5 y revisa ENCENDIDO. Sin sonido: volumen y AJUSTES. Home/ajustes: instalar chrome/LEEME.txt, activar la preferencia y reiniciar. La temporal se descarga al cerrar: recarga en about:debugging. Datos del juego: locales, se pierden al limpiar caché.</p><h2>Temas visuales</h2><p>Calculadora (retro), Clásico (neutral), Minecraft (bloques), GeoDash (neón), Navidad (rojo/verde/dorado) y Año Nuevo (dorado).</p><h2>Información técnica</h2><p>JavaScript, HTML5, CSS3, WebExtensions API. Cursores .cur, audio MP3, storage local. ES/EN. Firefox 109+ en Windows y Linux.</p><h2>Créditos</h2><p>Cursores: DUCK_BERET, de Hyper Bun Buster (ctmatthews.itch.io/polite-cat-mouse-cursor). Clic: Pixabay. Maullido: original Freezeezy Peak. Desarrollo: Freezeezy Peak.</p><h2>Licencia GPL v3</h2><p>Permitido: uso personal y comercial, modificar y distribuir. Requerido: atribución a Freezezy Peak, documentar cambios y misma licencia. Prohibido: atribuirse la autoría, vender sin autorización o quitar atribuciones. Contacto: canales oficiales de Freezezy Peak.</p><h2>Contacto</h2><p>Freezezy Peak: GitHub, YouTube, GitLab, itch.io. Bugs o sugerencias: GitHub Issues.</p><h2>Historial</h2><p>V1.0: licencia actualizada, juego con estatua, 6 temas, festivo inteligente. VERSIÓN: 1.0 · FECHA: 2026-09-18 · Freezezy Peak.</p>"
+  }
+}
