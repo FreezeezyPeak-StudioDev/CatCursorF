@@ -41,11 +41,14 @@
 
 ### Firefox Developer Edition (Desarrollo)
 ```bash
+
+
 1. Descargar Firefox Developer Edition
 2. about:debugging
 3. Click "Este Firefox"
 4. "Cargar extensión temporal"
 5. Selecciona la carpeta CatCursorF/
+
 ```
 
 ### Mozilla Add-ons (Público)
@@ -54,33 +57,27 @@
 ---
 
 ## Estructura del Proyecto
-CatCursorF/
-├── manifest.json
-├── background.js
-├── content.js
-├── popup/
-├── tutorial/
-├── _locales/
-│ ├── es/
-│ └── en/
-├── assets/
-│ ├── cursors/
-│ ├── fx/
-│ ├── icons/
-│ └── texturas/
-├── chrome/
-├── creditos/
-├── licencia/
-├── versiones/
-├── .gitignore
-├── FINGERPRINT.txt
-├── LICENSE
-├── Marca Freezeezy Peak.txt
-├── README Freezeezy Peak.txt
-├── background.js
-├── build.py
-├── content.js
-└── manifest.json
+
+- CatCursorF/
+  - manifest.json (Configuración principal)
+  - background.js (Valores globales)
+  - content.js (Inyección en webs)
+  - popup/ (Menú interactivo)
+  - tutorial/ (Página bienvenida)
+  - _locales/ (Traducciones)
+    - es/
+    - en/
+  - assets/
+    - cursors/ (13 archivos .cur)
+    - fx/ (Audio)
+    - icons/ (Iconos por tema)
+    - texturas/ (Elementos gráficos)
+  - chrome/
+  - creditos/
+  - licencia/
+  - versiones/
+  - LICENSE (GPL v3)
+    
 ---
 
 ## Cómo Usar
@@ -142,6 +139,7 @@ Encontraste un bug? Ideas de mejora?
 
 <p align="center">
   <strong>Hecho por Freezezy Peak</strong><br>
+  <a href="https://www.youtube.com/@FreezeezyPeak">YouTube</a> | 
   <a href="https://addons.mozilla.org/es-ES/firefox/user/20170408/">Mi perfil Firefox</a> | 
   <a href="https://github.com/FreezeezyPeak-StudioDev">GitHub</a>
 </p>
