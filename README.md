@@ -55,19 +55,32 @@
 
 ## Estructura del Proyecto
 CatCursorF/
-├── manifest.json # Configuración principal
-├── background.js # Valores globales
-├── content.js # Inyección en webs
-├── popup/ # Menú interactivo
-├── tutorial/ # Página bienvenida
-├── _locales/es+en/ # Traducciones
+├── manifest.json
+├── background.js
+├── content.js
+├── popup/
+├── tutorial/
+├── _locales/
+│ ├── es/
+│ └── en/
 ├── assets/
-│ ├── cursors/ # 13 archivos .cur
-│ ├── fx/ # Audio (maullido + clic)
-│ ├── icons/ # Iconos por tema
-│ └── texturas/ # Elementos gráficos
-└── LICENSE # GPL v3
-
+│ ├── cursors/
+│ ├── fx/
+│ ├── icons/
+│ └── texturas/
+├── chrome/
+├── creditos/
+├── licencia/
+├── versiones/
+├── .gitignore
+├── FINGERPRINT.txt
+├── LICENSE
+├── Marca Freezeezy Peak.txt
+├── README Freezeezy Peak.txt
+├── background.js
+├── build.py
+├── content.js
+└── manifest.json
 ---
 
 ## Cómo Usar
