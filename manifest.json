@@ -1,20 +1,17 @@
 {
   "manifest_version": 3,
   "name": "CatCursorF",
-  "version": "1.0",
-  "description": "CatCursorF de Freezeezy Peak. GitHub: github.com/FreezeezyPeak-StudioDev · GitLab: gitlab.com/freezeezypeak.studiodev · Correo: freezeezypeak.studiodev@gmail.com.",
+  "version": "1.0.1",
+  "description": "...",
   "default_locale": "es",
   
   "browser_specific_settings": {
     "gecko": {
       "id": "catcursorf@freezeezypeak.local",
-      "strict_min_version": "140.0",
+      "strict_min_version": "142.0",
       "data_collection_permissions": {
         "required": ["none"]
       }
-    },
-    "gecko_android": {
-      "strict_min_version": "142.0"
     }
   },
   
@@ -23,18 +20,8 @@
     "96": "assets/icons/iconNormal.svg"
   },
   
-  "permissions": [
-    "storage",
-    "tabs",
-    "scripting",
-    "clipboardWrite"
-  ],
-  
-  "host_permissions": [
-    "<all_urls>",
-    "about:blank",
-    "about:home"
-  ],
+  "permissions": ["storage", "tabs", "scripting", "clipboardWrite"],
+  "host_permissions": ["<all_urls>"],
   
   "background": {
     "scripts": ["background.js"]
@@ -48,28 +35,17 @@
   
   "content_scripts": [
     {
-      "matches": ["<all_urls>", "about:blank", "about:home"],
+      "matches": ["<all_urls>"],
       "js": ["content.js"],
       "run_at": "document_start",
-      "all_frames": true
+      "all_frames": true,
+      "match_about_blank": true
     }
   ],
   
   "web_accessible_resources": [
     {
-      "resources": [
-        "assets/cursors/Cat - Normal Select.cur",
-        "assets/cursors/Cat - Link Select B.cur",
-        "assets/cursors/Cat - Text Select.cur",
-        "assets/cursors/Cat - Help Select.cur",
-        "assets/cursors/Cat - Pen.cur",
-        "assets/cursors/Cat - Precision Select.cur",
-        "assets/cursors/Cat - Unavailable.cur",
-        "assets/cursors/Cat - Vertical Resize.cur",
-        "assets/fx/Cat_meow.mp3",
-        "assets/fx/matthewvakaliuk73627-mouse-click.mp3",
-        "assets/cursors/README.txt"
-      ],
+      "resources": ["assets/cursors/*", "assets/fx/*"],
       "matches": ["<all_urls>"]
     }
   ]
