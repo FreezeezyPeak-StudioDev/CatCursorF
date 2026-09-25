@@ -1,9 +1,3 @@
-
-<div align="center">
-
-<div align="center">
-
-
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1200&color=58A6FF&center=true&vCenter=true&width=500&lines=Games+Developer;Open+Source+Projects;Creative+Coding;Simple+Apps+Creator;Learning+New+Things" />
 
 <br>
@@ -12,7 +6,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/FreezeezyPeak/Info-Freezeezy-PeaK/main/logo_freezeezy.png" width="220">
 </p>
-
+# FreezeezyPeak
 
 ![CatCursorF](https://img.shields.io/badge/CatCursorF-v1.0.1-blue?style=for-the-badge&logo=firefox)
 
