@@ -1,145 +1,210 @@
-<!-- LOGO FREEZEEZY PEAK -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FreezeezyPeak/Info-Freezeezy-PeaK/main/logo_freezeezy.png" width="220">
-</p>
 
-# Freezeezy Peak
+<div align="center">
 
-### `Code • Create • Open Source`
+![CatCursorF](https://img.shields.io/badge/CatCursorF-v1.0.1-blue?style=for-the-badge&logo=firefox)
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=58A6FF&center=true&vCenter=true&width=435&lines=Games+Developer;Open+Source+Projects;Simple+Apps+Creator;Learning+New+Things;Creative+Coding" />
-</p>
+### 🐱 CatCursorF
+
+**Extensión Firefox con Cursores de Gato**
+
+</div>
 
 ---
-
-<!-- CATCURSORF LOGO -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FreezeezyPeak-StudioDev/CatCursorF/main/assets/icons/iconNormal.svg" width="120">
-</p>
 
 # CatCursorF
 
-**Firefox cursor extension with customizable cat designs**  
-*Extensión Firefox que reemplaza cursores con diseños adorables de gatos*
+**[🇪🇸 Español](#español)** | **[🇬🇧 English](#english)**
 
 ---
 
-## Características
+## Español
 
-- 13 cursores contextuales - Normal, links, texto, y más
-- 6 temas visuales - Calculadora, Minecraft, GeoDash, Navidad, Año Nuevo y Clásico
-- Sonidos personalizados - Maullidos y efectos interactivos
-- Juego Shell - Sistema de economía con apuestas y premios
-- Efectos festivos - Nieve animada y partículas doradas
-- Bilingüe - Español e Inglés
-- Ligero - 5-8 MB, sin permisos invasivos
+### CatCursorF — Extensión Firefox con Cursores de Gato
 
----
+Reemplaza todos tus cursores con adorables diseños de gatos. 13 cursores contextuales, 6 temas visuales, sonidos interactivos, juego Shell con economía integrada y más. Bilingüe (ES/EN) y código abierto.
 
-## Instalación Rápida
+100% local • Sin cuentas • Código abierto (GPL-3.0)
 
-### Firefox Developer Edition (Desarrollo)
-```bash
+### Características
+
+- **13 Cursores Personalizados** — Normal, enlace, texto, ayuda, lápiz, precisión, unavailable, redimensionamiento vertical
+- **6 Temas Visuales** — Calculadora, Clásico, Minecraft, GeoDash, Navidad, Año Nuevo
+- **Sonidos Interactivos** — Clics y maullidos aleatorios durante la navegación
+- **Juego Shell** — Apuesta dinero, mezcla tazas, gana premios
+- **Bilingüe** — Interfaz en español e inglés
+- **Efectos Festivos** — Nieve animada y efectos especiales en fechas
+- **100% Local** — Sin nube, sin rastreo, todo en tu navegador
+
+### Estructura del Proyecto
 
 
-1. Descargar Firefox Developer Edition
-2. about:debugging
-3. Click "Este Firefox"
-4. "Cargar extensión temporal"
-5. Selecciona la carpeta CatCursorF/
+CatCursorF/
+├── popup/ (Menú interactivo)
+├── tutorial/ (Página de bienvenida)
+├── _locales/
+│ ├── es/ (Traducciones español)
+│ └── en/ (Traducciones inglés)
+├── assets/
+│ ├── cursors/ (13 archivos .cur)
+│ ├── fx/ (Archivos de audio)
+│ ├── icons/ (Iconos por tema)
+│ └── texturas/ (Elementos gráficos)
+├── chrome/ (Estilos de Firefox)
+├── creditos/ (Página de créditos)
+├── licencia/ (Información de licencia)
+├── versiones/ (Historial de versiones)
+├── LICENSE (GPL v3)
+└── manifest.json (Configuración)
 
-```
 
-### Mozilla Add-ons (Público)
-[Instalar desde Mozilla Add-ons](https://addons.mozilla.org/es-ES/firefox/user/20170408/)
 
----
-
-## Estructura del Proyecto
-
-- CatCursorF/
-  - manifest.json (Configuración principal)
-  - background.js (Valores globales)
-  - content.js (Inyección en webs)
-  - popup/ (Menú interactivo)
-  - tutorial/ (Página bienvenida)
-  - _locales/ (Traducciones)
-    - es/
-    - en/
-  - assets/
-    - cursors/ (13 archivos .cur)
-    - fx/ (Audio)
-    - icons/ (Iconos por tema)
-    - texturas/ (Elementos gráficos)
-  - chrome/
-  - creditos/
-  - licencia/
-  - versiones/
-  - LICENSE (GPL v3)
-    
----
-
-## Cómo Usar
+### Cómo Usar
 
 **Menú Principal:**
-1. Click en el icono de gato en Firefox
-2. Pantalla LCD muestra el estado
-3. Botones: AJUSTES, IDIOMA, REDES, MAS, JUEGO, AYUDA
+1. Click en el icono de gato en la barra de herramientas
+2. Pantalla LCD muestra el estado actual
+3. Botones: AJUSTES, IDIOMA, REDES, MÁS, JUEGO, AYUDA
 
 **Cambiar Cursor:**
-- AJUSTES > Cursor ON/OFF
+- Click en AJUSTES
+- Activar/desactivar cursores
 - Selecciona entre 6 temas visuales
 
 **Jugar Shell:**
-- Click JUEGO
-- Apuesta dinero, mezcla tazas, gana premios
+- Click en JUEGO
+- Apuesta dinero
+- Mezcla las tazas
+- ¡Gana premios!
 
----
-
-## Temas Disponibles
+### Temas Disponibles
 
 | Tema | Descripción |
 |------|------------|
-| Calculadora | Retro con colores corporativos |
-| Clasico | Minimalista y neutral |
-| Minecraft | Bloques y estética pixelada |
-| GeoDash | Neon brillante con animaciones |
-| Navidad | Rojo, verde y dorado festivo |
-| Ano Nuevo | Plateado y dorado celebrativo |
+| **Calculadora** | Retro con colores corporativos |
+| **Clásico** | Minimalista y neutral |
+| **Minecraft** | Bloques y estética pixelada |
+| **GeoDash** | Neón brillante con animaciones |
+| **Navidad** | Rojo, verde y dorado festivo |
+| **Año Nuevo** | Plateado y dorado celebrativo |
+
+### Efectos de Audio
+
+- **Clic** — Se escucha en cada click (Pixabay)
+- **Maullido** — Aleatorio durante la navegación (~8% probabilidad)
+- **Festividades** — Nieve animada y efectos especiales
+
+### Licencia
+
+**GNU General Public License v3.0** — Código abierto y libre
+
+**Créditos:**
+- Cursores: C.T. Matthews
+- Sonido clic: Pixabay
+- Desarrollo: Freezeezy Peak
+
+### Contribuir
+
+- **Issues:** https://github.com/FreezeezyPeak-StudioDev/CatCursorF/issues
+- **Discusiones:** https://github.com/FreezeezyPeak-StudioDev/CatCursorF/discussions
 
 ---
 
-## Efectos de Audio
+## English
 
-- Clic - Se escucha en cada click (Pixabay)
-- Maullido - Aleatorio durante navegacion (8% probabilidad)
-- Festividades - Nieve y efectos especiales en fechas
+### CatCursorF — Firefox Extension with Cat Cursors
 
----
+Replace all your cursors with adorable cat designs. 13 contextual cursors, 6 visual themes, interactive sounds, integrated Shell game with economy and more. Bilingual (ES/EN) and open source.
 
-## Licencia
+100% local • No accounts • Open source (GPL-3.0)
 
-GPL v3 - Codigo abierto y libre para modificar
+### Features
 
-Creditos:
-- Cursores: C.T. Matthews (https://ctmatthews.itch.io/polite-cat-mouse-cursor)
-- Sonido clic: Pixabay (https://pixabay.com/sound-effects/)
-- Desarrollo: Freezezy Peak
+- **13 Custom Cursors** — Normal, link, text, help, pen, precision, unavailable, vertical resize
+- **6 Visual Themes** — Calculator, Classic, Minecraft, GeoDash, Christmas, New Year
+- **Interactive Sounds** — Clicks and random meows during browsing
+- **Shell Game** — Bet money, shuffle cups, win prizes
+- **Bilingual** — Interface in Spanish and English
+- **Holiday Effects** — Animated snow and special effects on dates
+- **100% Local** — No cloud, no tracking, everything in your browser
 
----
+### Project Structure
 
-## Contribuir
 
-Encontraste un bug? Ideas de mejora?
-- Issues: https://github.com/FreezeezyPeak-StudioDev/CatCursorF/issues
-- Discussiones: https://github.com/FreezeezyPeak-StudioDev/CatCursorF/discussions
+
+CatCursorF/
+├── popup/ (Interactive menu)
+├── tutorial/ (Welcome page)
+├── _locales/
+│ ├── es/ (Spanish translations)
+│ └── en/ (English translations)
+├── assets/
+│ ├── cursors/ (13 .cur files)
+│ ├── fx/ (Audio files)
+│ ├── icons/ (Icons by theme)
+│ └── texturas/ (Graphic elements)
+├── chrome/ (Firefox styles)
+├── creditos/ (Credits page)
+├── licencia/ (License information)
+├── versiones/ (Version history)
+├── LICENSE (GPL v3)
+└── manifest.json (Configuration)
+
+
+
+### How to Use
+
+**Main Menu:**
+1. Click the cat icon in Firefox toolbar
+2. LCD screen shows current status
+3. Buttons: SETTINGS, LANGUAGE, NETWORKS, MORE, GAME, HELP
+
+**Change Cursor:**
+- Click SETTINGS
+- Enable/disable cursors
+- Select from 6 visual themes
+
+**Play Shell:**
+- Click GAME
+- Bet money
+- Shuffle the cups
+- Win prizes!
+
+### Available Themes
+
+| Theme | Description |
+|------|------------|
+| **Calculator** | Retro with corporate colors |
+| **Classic** | Minimalist and neutral |
+| **Minecraft** | Blocks and pixelated aesthetic |
+| **GeoDash** | Bright neon with animations |
+| **Christmas** | Red, green and gold festive |
+| **New Year** | Silver and gold celebratory |
+
+### Audio Effects
+
+- **Click** — Heard on every mouse click (Pixabay)
+- **Meow** — Random during browsing (~8% probability)
+- **Holidays** — Animated snow and special effects
+
+### License
+
+**GNU General Public License v3.0** — Open source and free to modify
+
+**Credits:**
+- Cursors: C.T. Matthews
+- Click sound: Pixabay
+- Development: Freezeezy Peak
+
+### Contribute
+
+- **Issues:** https://github.com/FreezeezyPeak-StudioDev/CatCursorF/issues
+- **Discussions:** https://github.com/FreezeezyPeak-StudioDev/CatCursorF/discussions
 
 ---
 
 <p align="center">
-  <strong>Hecho por Freezezy Peak</strong><br>
-  <a href="https://www.youtube.com/@FreezeezyPeak">YouTube</a> | 
-  <a href="https://addons.mozilla.org/es-ES/firefox/user/20170408/">Mi perfil Firefox</a> | 
-  <a href="https://github.com/FreezeezyPeak-StudioDev">GitHub</a>
+<strong>Made by Freezeezy Peak</strong><br>
+<a href="https://www.youtube.com/@FreezeezyPeak">YouTube</a> |
+<a href="https://addons.mozilla.org/es-ES/firefox/user/20170408/">Firefox Profile</a> |
+<a href="https://github.com/FreezeezyPeak-StudioDev">GitHub</a>
 </p>
