@@ -1,9 +1,13 @@
 
 <div align="center">
 
+<div align="center">
+
+<img src="assets/img/logo_freezeezy.png" alt="Freezeezy Peak" width="180">
+
 ![CatCursorF](https://img.shields.io/badge/CatCursorF-v1.0.1-blue?style=for-the-badge&logo=firefox)
 
-### 🐱 CatCursorF
+### CatCursorF
 
 **Extensión Firefox con Cursores de Gato**
 
