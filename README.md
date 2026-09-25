@@ -3,23 +3,31 @@
 <br>
 
 <!-- LOGO CENTRADO -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FreezeezyPeak/Info-Freezeezy-PeaK/main/logo_freezeezy.png" width="220">
-   FreezeezyPeak
+<div align="center">
 
-</p>
-#
-![CatCursorF](https://img.shields.io/badge/CatCursorF-v1.0.1-blue?style=for-the-badge&logo=firefox)
+<img src="https://raw.githubusercontent.com/FreezeezyPeak/Info-Freezeezy-PeaK/main/logo_freezeezy.png" width="220">
 
-### CatCursorF
-
-**Extensión Firefox con Cursores de Gato**
+# FreezeezyPeak
 
 </div>
 
 ---
 
-# CatCursorF
+<div align="center">
+
+![CatCursorF](https://img.shields.io/badge/CatCursorF-v1.0.1-blue?style=for-the-badge&logo=firefox)
+
+## CatCursorF
+
+**Extensión Firefox con Cursores de Gato Personalizables**
+
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![License](https://img.shields.io/badge/License-GPL%20v3-blue)
+![Firefox](https://img.shields.io/badge/Firefox-Compatible-orange)
+
+</div>
+
+---
 
 **[🇪🇸 Español](#español)** | **[🇬🇧 English](#english)**
 
