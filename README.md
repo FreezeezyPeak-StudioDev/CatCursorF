@@ -1,5 +1,3 @@
-<div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1200&color=58A6FF&center=true&vCenter=true&width=500&lines=Games+Developer;Open+Source+Projects;Creative+Coding;Simple+Apps+Creator;Learning+New+Things" />
 
 <br>
 
@@ -55,23 +53,31 @@ Reemplaza todos tus cursores con adorables diseños de gatos. 13 cursores contex
 ### Estructura del Proyecto
 
 
+## Estructura del Proyecto
+
+```text
 CatCursorF/
-├── popup/ (Menú interactivo)
-├── tutorial/ (Página de bienvenida)
+├── popup/                         ← Menú interactivo
+├── tutorial/                      ← Página de bienvenida
+│
 ├── _locales/
-│ ├── es/ (Traducciones español)
-│ └── en/ (Traducciones inglés)
+│   ├── es/                        ← Traducciones español
+│   └── en/                        ← Traducciones inglés
+│
 ├── assets/
-│ ├── cursors/ (13 archivos .cur)
-│ ├── fx/ (Archivos de audio)
-│ ├── icons/ (Iconos por tema)
-│ └── texturas/ (Elementos gráficos)
-├── chrome/ (Estilos de Firefox)
-├── creditos/ (Página de créditos)
-├── licencia/ (Información de licencia)
-├── versiones/ (Historial de versiones)
-├── LICENSE (GPL v3)
-└── manifest.json (Configuración)
+│   ├── cursors/                   ← 13 archivos .cur
+│   ├── fx/                        ← Archivos de audio
+│   ├── icons/                     ← Iconos por tema
+│   └── texturas/                  ← Elementos gráficos
+│
+├── chrome/                        ← Estilos de Firefox
+├── creditos/                      ← Página de créditos
+├── licencia/                      ← Información de licencia
+├── versiones/                     ← Historial de versiones
+│
+├── LICENSE                        ← Licencia GPL v3
+└── manifest.json                  ← Configuración
+```
 
 
 
@@ -147,26 +153,31 @@ Replace all your cursors with adorable cat designs. 13 contextual cursors, 6 vis
 ### Project Structure
 
 
+## Project Structure
 
+```text
 CatCursorF/
-├── popup/ (Interactive menu)
-├── tutorial/ (Welcome page)
+├── popup/                         ← Interactive menu
+├── tutorial/                      ← Welcome page
+│
 ├── _locales/
-│ ├── es/ (Spanish translations)
-│ └── en/ (English translations)
+│   ├── es/                        ← Spanish translations
+│   └── en/                        ← English translations
+│
 ├── assets/
-│ ├── cursors/ (13 .cur files)
-│ ├── fx/ (Audio files)
-│ ├── icons/ (Icons by theme)
-│ └── texturas/ (Graphic elements)
-├── chrome/ (Firefox styles)
-├── creditos/ (Credits page)
-├── licencia/ (License information)
-├── versiones/ (Version history)
-├── LICENSE (GPL v3)
-└── manifest.json (Configuration)
-
-
+│   ├── cursors/                   ← 13 .cur files
+│   ├── fx/                        ← Audio files
+│   ├── icons/                     ← Icons by theme
+│   └── texturas/                  ← Graphic elements
+│
+├── chrome/                        ← Firefox styles
+├── creditos/                      ← Credits page
+├── licencia/                      ← License information
+├── versiones/                     ← Version history
+│
+├── LICENSE                        ← GPL v3
+└── manifest.json                  ← Configuration
+```
 
 ### How to Use
 
