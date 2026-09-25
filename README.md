@@ -5,9 +5,10 @@
 <!-- LOGO CENTRADO -->
 <p align="center">
   <img src="https://raw.githubusercontent.com/FreezeezyPeak/Info-Freezeezy-PeaK/main/logo_freezeezy.png" width="220">
-</p>
-# FreezeezyPeak
+   FreezeezyPeak
 
+</p>
+#
 ![CatCursorF](https://img.shields.io/badge/CatCursorF-v1.0.1-blue?style=for-the-badge&logo=firefox)
 
 ### CatCursorF
