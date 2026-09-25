@@ -1,3 +1,4 @@
+<div align="center">
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1200&color=58A6FF&center=true&vCenter=true&width=500&lines=Games+Developer;Open+Source+Projects;Creative+Coding;Simple+Apps+Creator;Learning+New+Things" />
 
 <br>
