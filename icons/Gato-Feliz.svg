@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Gato feliz con detalles -->
+  
+  <!-- Oreja izquierda -->
+  <path d="M25 25 L20 5 L35 20 Z"
+        fill="white" stroke="#1a1a1a" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Interior oreja izquierda -->
+  <path d="M27 20 L24 10 L32 18 Z"
+        fill="#1a1a1a" opacity="0.2"/>
+  
+  <!-- Oreja derecha -->
+  <path d="M75 25 L80 5 L65 20 Z"
+        fill="white" stroke="#1a1a1a" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Interior oreja derecha -->
+  <path d="M73 20 L76 10 L68 18 Z"
+        fill="#1a1a1a" opacity="0.2"/>
+  
+  <!-- Cabeza del gato -->
+  <circle cx="50" cy="50" r="30" fill="white" stroke="#1a1a1a" stroke-width="5"/>
+  
+  <!-- Ojos (cerrados por felicidad) -->
+  <path d="M35 42 Q40 46 45 42"
+        fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M55 42 Q60 46 65 42"
+        fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Nariz -->
+  <path d="M48 55 L50 58 L52 55 Z"
+        fill="#1a1a1a"/>
+  
+  <!-- Boca feliz -->
+  <path d="M50 58 L50 60"
+        stroke="#1a1a1a" stroke-width="2.5"/>
+  <path d="M40 62 Q50 70 60 62"
+        fill="none" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
+  
+  <!-- Bigotes izquierdos -->
+  <line x1="20" y1="50" x2="32" y2="48" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="20" y1="55" x2="32" y2="55" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="20" y1="60" x2="32" y2="62" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Bigotes derechos -->
+  <line x1="80" y1="50" x2="68" y2="48" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="80" y1="55" x2="68" y2="55" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="80" y1="60" x2="68" y2="62" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Manchas decorativas -->
+  <circle cx="35" cy="35" r="4" fill="#1a1a1a" opacity="0.3"/>
+  <circle cx="65" cy="35" r="4" fill="#1a1a1a" opacity="0.3"/>
+</svg>

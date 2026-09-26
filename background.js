@@ -27,6 +27,31 @@ browser.tabs.onRemoved.addListener((tabId) => {
   }
 });
 
+// Servir cursores a otras extensiones (p. ej. DarkSnowF). / Serve cursors to other extensions.
+const CURSOR_ARCHIVOS = {
+  normal: "assets/cursors/Cat - Normal Select.cur",
+  link: "assets/cursors/Cat - Link Select B.cur",
+  texto: "assets/cursors/Cat - Text Select.cur",
+  ayuda: "assets/cursors/Cat - Help Select.cur",
+  pluma: "assets/cursors/Cat - Pen.cur",
+  precision: "assets/cursors/Cat - Precision Select.cur",
+  no: "assets/cursors/Cat - Unavailable.cur",
+  vertical: "assets/cursors/Cat - Vertical Resize.cur",
+};
+
+if (browser.runtime.onMessageExternal) {
+  browser.runtime.onMessageExternal.addListener(async (mensaje, origen) => {
+    if (!mensaje || (mensaje.type !== "get-cat-cursors" && mensaje.type !== "darksnowf-get-cursors")) return;
+    const cursores = {};
+    for (const [clave, ruta] of Object.entries(CURSOR_ARCHIVOS)) {
+      try {
+        cursores[clave] = browser.runtime.getURL(ruta);
+      } catch (e) {}
+    }
+    return { cursores };
+  });
+}
+
 // Valores iniciales y tutorial de bienvenida al instalar. / Initial values and welcome tutorial on install.
 browser.runtime.onInstalled.addListener(async (details) => {
   if (details.reason !== "install") return;

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <!-- Cabeza mejorada (azul victoria) -->
+  <circle cx="48" cy="52" r="30" fill="#2b4d80" stroke="#ffffff" stroke-width="3.5"/>
+  
+  <!-- Orejas mejoradas -->
+  <polygon points="26,38 20,14 40,28" fill="#2b4d80" stroke="#ffffff" stroke-width="3.5" stroke-linejoin="round"/>
+  <polygon points="70,38 76,14 56,28" fill="#2b4d80" stroke="#ffffff" stroke-width="3.5" stroke-linejoin="round"/>
+  
+  <!-- Interior orejas (celeste) -->
+  <polygon points="27,33 23,19 37,28" fill="#7fb3d5"/>
+  <polygon points="69,33 73,19 59,28" fill="#7fb3d5"/>
+  
+  <!-- Ojos mejorados (felices cerrados por victoria) -->
+  <path d="M32 48 Q38 52 44 48" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M52 48 Q58 52 64 48" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Líneas de felicidad bajo los ojos -->
+  <path d="M34 54 Q36 53 38 54" fill="none" stroke="#7fb3d5" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M58 54 Q60 53 62 54" fill="none" stroke="#7fb3d5" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Nariz -->
+  <path d="M46 58 L48 61 L50 58 Z" fill="#7fb3d5"/>
+  <circle cx="48" cy="59" r="1.2" fill="#1a1a1a" opacity="0.3"/>
+  
+  <!-- Boca MUY feliz (gran sonrisa) -->
+  <path d="M40 62 Q48 72 56 62" stroke="#7fb3d5" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <line x1="48" y1="61" x2="48" y2="62" stroke="#7fb3d5" stroke-width="2"/>
+  
+  <!-- Lengua feliz -->
+  <ellipse cx="48" cy="68" rx="3" ry="2.5" fill="#ff9db0" opacity="0.7"/>
+  
+  <!-- Bigotes mejorados -->
+  <g stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.9">
+    <line x1="12" y1="52" x2="28" y2="54"/>
+    <line x1="12" y1="58" x2="28" y2="58"/>
+    <line x1="12" y1="64" x2="28" y2="62"/>
+    <line x1="84" y1="52" x2="68" y2="54"/>
+    <line x1="84" y1="58" x2="68" y2="58"/>
+    <line x1="84" y1="64" x2="68" y2="62"/>
+  </g>
+  
+  <!-- Corona de victoria -->
+  <path d="M36 18 L40 10 L44 18 L48 8 L52 18 L56 10 L60 18" fill="#ffd94d" stroke="#ff9900" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="40" cy="10" r="2.5" fill="#ffd94d" stroke="#ff9900" stroke-width="1.5"/>
+  <circle cx="48" cy="8" r="3" fill="#ffd94d" stroke="#ff9900" stroke-width="1.5"/>
+  <circle cx="56" cy="10" r="2.5" fill="#ffd94d" stroke="#ff9900" stroke-width="1.5"/>
+  
+  <!-- Confeti de celebración -->
+  <rect x="24" y="35" width="3" height="3" fill="#ffd94d" opacity="0.7" transform="rotate(15 25 36)"/>
+  <rect x="68" y="35" width="3" height="3" fill="#ff9db0" opacity="0.7" transform="rotate(-15 69 36)"/>
+  <circle cx="30" cy="72" r="1.5" fill="#7fb3d5" opacity="0.8"/>
+  <circle cx="66" cy="72" r="1.5" fill="#ffd94d" opacity="0.8"/>
+  
+  <!-- Mejillas sonrojadas -->
+  <ellipse cx="32" cy="60" rx="4" ry="3" fill="#7fb3d5" opacity="0.4"/>
+  <ellipse cx="64" cy="60" rx="4" ry="3" fill="#7fb3d5" opacity="0.4"/>
+</svg>
