@@ -14,7 +14,7 @@
 
 <div align="center">
 
-![CatCursorF](https://img.shields.io/badge/CatCursorF-v1.0.1-blue?style=for-the-badge&logo=firefox)
+![CatCursorF](https://img.shields.io/badge/CatCursorF-v1.0.2-blue?style=for-the-badge&logo=firefox)
 
 ## CatCursorF
 
@@ -36,7 +36,7 @@
 
 ### CatCursorF — Extensión Firefox con Cursores de Gato
 
-Reemplaza todos tus cursores con adorables diseños de gatos. 13 cursores contextuales, 6 temas visuales, sonidos interactivos, juego Shell con economía integrada y más. Bilingüe (ES/EN) y código abierto.
+Reemplaza todos tus cursores con adorables diseños de gatos. 4 cursores contextuales, 6 temas visuales, sonidos interactivos, juego Shell con economía integrada y más. Bilingüe (ES/EN) y código abierto.
 
 100% local • Sin cuentas • Código abierto (GPL-3.0)
 
@@ -136,7 +136,7 @@ CatCursorF/
 
 ### CatCursorF — Firefox Extension with Cat Cursors
 
-Replace all your cursors with adorable cat designs. 13 contextual cursors, 6 visual themes, interactive sounds, integrated Shell game with economy and more. Bilingual (ES/EN) and open source.
+Replace all your cursors with adorable cat designs. 4 contextual cursors, 6 visual themes, interactive sounds, integrated Shell game with economy and more. Bilingual (ES/EN) and open source.
 
 100% local • No accounts • Open source (GPL-3.0)
 
