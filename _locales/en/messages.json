@@ -83,6 +83,18 @@
   "sound": {
     "message": "Sound"
   },
+  "volTitle": {
+    "message": "VOLUME"
+  },
+  "volGeneral": {
+    "message": "Master Volume"
+  },
+  "volClick": {
+    "message": "Click Volume"
+  },
+  "volMeow": {
+    "message": "Meow Volume"
+  },
   "fxAuto": {
     "message": "Holiday: AUTO"
   },
@@ -156,7 +168,7 @@
     "message": "The .cur files and click sound are NOT mine: they belong to their authors (see Credits)."
   },
   "creditsHtml": {
-    "message": "<p><img class=\"org-logo\" src=\"../assets/texturas/logo_freezeezy peak_HD.png\" alt=\"Freezeezy Peak\"><br><b>CatCursorF:</b> Freezeezy Peak<br>Systems Engineer<br><a href=\"mailto:freezeezypeak.studiodev@gmail.com\">freezeezypeak.studiodev@gmail.com</a></p><p><b>Textures (.cur):</b> DUCK_BERET (CassMakesGames)<br>Creator website: <a href=\"https://ctmatthews.itch.io/\" target=\"_blank\" rel=\"noopener\">ctmatthews.itch.io</a><br>(see assets/cursors/README.txt)</p><p><b>FX Meow \"Cat_meow\":</b> Freezeezy Peak (own).</p><p><b>FX Click:</b> matthewvakaliuk73627 via <a href=\"https://pixabay.com/es/users/matthewvakaliuk73627-48347364/\" target=\"_blank\" rel=\"noopener\">Pixabay</a>.</p>"
+    "message": "<p><img class=\"org-logo\" src=\"../assets/texturas/logo_freezeezyPeak_HD.png\" alt=\"FreezeezyPeak\"><br><b>CatCursorF:</b> FreezeezyPeak<br>Systems Engineer<br><a href=\"mailto:freezeezypeak.studiodev@gmail.com\">freezeezypeak.studiodev@gmail.com</a></p><p><b>Textures (.cur):</b> DUCK_BERET (CassMakesGames)<br>Creator website: <a href=\"https://ctmatthews.itch.io/\" target=\"_blank\" rel=\"noopener\">ctmatthews.itch.io</a><br>(see assets/cursors/README.txt)</p><p><b>FX Meow \"Cat_meow\":</b> FreezeezyPeak (own).</p><p><b>FX Click:</b> matthewvakaliuk73627 via <a href=\"https://pixabay.com/es/users/matthewvakaliuk73627-48347364/\" target=\"_blank\" rel=\"noopener\">Pixabay</a>.</p>"
   },
   "t1t": {
     "message": "1. Your cat cursor"
@@ -180,7 +192,7 @@
     "message": "4. Settings, language and themes"
   },
   "t4b": {
-    "message": "SETTINGS holds: Cursor ON/OFF, Sound ON/OFF, Holiday AUTO/ALWAYS/OFF (snow at Christmas, gold at New Year), ES/EN Language and 6 Themes: Calculator, Classic, Minecraft, GeoDash, Christmas and New Year. The toolbar icon follows the theme. Language can also be switched from the menu LANGUAGE button."
+    "message": "SETTINGS holds: Cursor ON/OFF, Sound ON/OFF, Master / Click / Meow Volume (0-100, Master multiplies the others), Holiday AUTO/ALWAYS/OFF (snow at Christmas, gold at New Year), ES/EN Language and 6 Themes: Calculator, Classic, Minecraft, GeoDash, Christmas and New Year. The toolbar icon follows the theme. Language can also be switched from the menu LANGUAGE button."
   },
   "t5t": {
     "message": "5. Networks, My Web and email"
@@ -255,13 +267,13 @@
     "message": "FULL CREDITS"
   },
   "crMineT": {
-    "message": "My own work (Freezeezy Peak)"
+    "message": "My own work (FreezeezyPeak)"
   },
   "crThirdT": {
     "message": "Third-party (NOT mine)"
   },
   "crMineB": {
-    "message": "<p><b>CatCursorF</b> (Freezeezy Peak): extension, retro menu with 6 themes, Shell game with economy, snow/gold holiday effect, Cat_meow meow and cursors on popup and pages.</p><p><b>Logo:</b> Freezeezy Peak mountain (own).</p><p><b>Theme cats and menu icons:</b> drawn for this extension.</p>"
+    "message": "<p><b>CatCursorF</b> (FreezeezyPeak): extension, retro menu with 6 themes, Shell game with economy, snow/gold holiday effect, Cat_meow meow and cursors on popup and pages.</p><p><b>Logo:</b> FreezeezyPeak mountain (own).</p><p><b>Theme cats and menu icons:</b> drawn for this extension.</p>"
   },
   "crThirdB": {
     "message": "<p><b>.cur textures:</b> DUCK_BERET (CassMakesGames). Website: ctmatthews.itch.io. See README in credits.</p><p><b>Click sound:</b> matthewvakaliuk73627 via Pixabay.</p><p><b>YouTube, GitHub, GitLab, AMO and itch.io brands:</b> owned by their owners; used only as links.</p>"
@@ -273,6 +285,6 @@
     "message": "CatCursorF LICENSE"
   },
   "licBody": {
-    "message": "<h2>CATCURSORF - Firefox Cursor Extension</h2><p><b>Description:</b> replaces browser cursors with custom cats. 8 contextual cursors, sounds, visual themes, interactive game and bilingual support.</p><h2>Features</h2><p>8 cat cursors · sounds (8% meow + click) · 6 visual themes · live settings panel · Shell game (free bets, work, loans, statue) · automatic holiday effects · ES/EN · works on websites, iframes and special pages · all local.</p><h2>Requirements</h2><p>Firefox 109+. Windows 7+ and Linux. About 3 MB.</p><h2>Install</h2><p>Development: about:debugging, This Firefox, Load Temporary Add-on, CatCursorF folder. Public: addons.mozilla.org, search CatCursorF, Add to Firefox.</p><h2>Project structure</h2><p>manifest.json · background.js · content.js · popup/ · tutorial/ · creditos/ · licencia/ · _locales/es+en/ · assets/{cursors, fx, icons, texturas} · chrome/ · versiones/ · build.py</p><h2>Usage guide</h2><p>Cat icon: master power and states on the display. SETTINGS: cursor, sound, holiday, stars, auto theme, language and 6 themes. LANGUAGE: instant ES/EN. NETWORKS: YouTube, GitHub, GitLab, email, AMO, My Web and itch.io. MORE: tutorial, credits and README. LICENSE: this text. GAME: bet anything (0 allowed, ALL IN for everything), win double, work +0.25, 10/50/100 loans, 0 is game over; goal: $$1,000,000 statue.</p><h2>Cursor system</h2><p>Normal, Link, Pen, Text, Help, Unavailable, Precision and Vertical, depending on element context.</p><h2>Audio effects</h2><p>Click on every click (Pixabay). 8% meow per click (own). Snow Nov 25-Jan 25 and gold Dec 31/Jan 1, disableable; hidden on video and fullscreen.</p><h2>Permissions</h2><p>Minimal: websites &lt;all_urls&gt; (cursors), local storage (settings), tabs (tutorial) and clipboard (copy email). No history, passwords or personal data.</p><h2>Troubleshooting</h2><p>No cursor: F5 and check ON. No sound: volume and SETTINGS. Home/settings: install chrome/LEEME.txt, enable the preference and restart. Temporary unloads on close: reload in about:debugging. Game data is local, lost when clearing cache.</p><h2>Visual themes</h2><p>Calculator (retro), Classic (neutral), Minecraft (blocks), GeoDash (neon), Christmas (red/green/gold) and New Year (gold).</p><h2>Technical info</h2><p>JavaScript, HTML5, CSS3, WebExtensions API. .cur cursors, MP3 audio, local storage. ES/EN. Firefox 109+ on Windows and Linux.</p><h2>Credits</h2><p>Cursors: DUCK_BERET, from Hyper Bun Buster (ctmatthews.itch.io/polite-cat-mouse-cursor). Click: Pixabay. Meow: original Freezeezy Peak. Development: Freezeezy Peak.</p><h2>GPL v3 License</h2><p>Allowed: personal and commercial use, modify and distribute. Required: credit Freezezy Peak, document changes and same license. Forbidden: claiming authorship, selling without authorization or removing credits. Contact: official Freezezy Peak channels.</p><h2>Contact</h2><p>Freezezy Peak: GitHub, YouTube, GitLab, itch.io. Bugs or suggestions: GitHub Issues.</p><h2>History</h2><p>V1.0: updated license, statue game, 6 themes, smart holiday FX. VERSION: 1.0 · DATE: 2026-09-18 · Freezezy Peak.</p>"
+    "message": "<h2>CATCURSORF - Firefox Cursor Extension</h2><p><b>Description:</b> replaces browser cursors with custom cats. 8 contextual cursors, sounds, visual themes, interactive game and bilingual support.</p><h2>Features</h2><p>8 cat cursors · sounds (8% meow + click) · 6 visual themes · live settings panel · Shell game (free bets, work, loans, statue) · automatic holiday effects · ES/EN · works on websites, iframes and special pages · all local.</p><h2>Requirements</h2><p>Firefox 109+. Windows 7+ and Linux. About 3 MB.</p><h2>Install</h2><p>Development: about:debugging, This Firefox, Load Temporary Add-on, CatCursorF folder. Public: addons.mozilla.org, search CatCursorF, Add to Firefox.</p><h2>Project structure</h2><p>manifest.json · background.js · content.js · popup/ · tutorial/ · creditos/ · licencia/ · _locales/es+en/ · assets/{cursors, fx, icons, texturas} · chrome/ · versiones/ · build.py</p><h2>Usage guide</h2><p>Cat icon: master power and states on the display. SETTINGS: cursor, sound, holiday, stars, auto theme, language and 6 themes. LANGUAGE: instant ES/EN. NETWORKS: YouTube, GitHub, GitLab, email, AMO, My Web and itch.io. MORE: tutorial, credits and README. LICENSE: this text. GAME: bet anything (0 allowed, ALL IN for everything), win double, work +0.25, 10/50/100 loans, 0 is game over; goal: $$1,000,000 statue.</p><h2>Cursor system</h2><p>Normal, Link, Pen, Text, Help, Unavailable, Precision and Vertical, depending on element context.</p><h2>Audio effects</h2><p>Click on every click (Pixabay). 8% meow per click (own). Snow Nov 25-Jan 25 and gold Dec 31/Jan 1, disableable; hidden on video and fullscreen.</p><h2>Permissions</h2><p>Minimal: websites &lt;all_urls&gt; (cursors), local storage (settings), tabs (tutorial) and clipboard (copy email). No history, passwords or personal data.</p><h2>Troubleshooting</h2><p>No cursor: F5 and check ON. No sound: volume and SETTINGS. Home/settings: install chrome/LEEME.txt, enable the preference and restart. Temporary unloads on close: reload in about:debugging. Game data is local, lost when clearing cache.</p><h2>Visual themes</h2><p>Calculator (retro), Classic (neutral), Minecraft (blocks), GeoDash (neon), Christmas (red/green/gold) and New Year (gold).</p><h2>Technical info</h2><p>JavaScript, HTML5, CSS3, WebExtensions API. .cur cursors, MP3 audio, local storage. ES/EN. Firefox 109+ on Windows and Linux.</p><h2>Credits</h2><p>Cursors: DUCK_BERET, from Hyper Bun Buster (ctmatthews.itch.io/polite-cat-mouse-cursor). Click: Pixabay. Meow: original FreezeezyPeak. Development: FreezeezyPeak.</p><h2>GPL v3 License</h2><p>Allowed: personal and commercial use, modify and distribute. Required: credit Freezezy Peak, document changes and same license. Forbidden: claiming authorship, selling without authorization or removing credits. Contact: official Freezezy Peak channels.</p><h2>Contact</h2><p>Freezezy Peak: GitHub, YouTube, GitLab, itch.io. Bugs or suggestions: GitHub Issues.</p><h2>History</h2><p>V1.0: updated license, statue game, 6 themes, smart holiday FX. VERSION: 1.0 · DATE: 2026-09-18 · Freezezy Peak.</p>"
   }
 }

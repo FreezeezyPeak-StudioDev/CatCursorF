@@ -1,4 +1,4 @@
-/* CatCursorF v1.0 - Freezeezy Peak.
+/* CatCursorF v1.0.3 - FreezeezyPeak.
    GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com */
 /* Paginas internas. Copiar con los 8 .cur a <perfil>/chrome/. / Internal pages. Copy with the 8 .cur files to <profile>/chrome/. */
 
@@ -28,5 +28,8 @@ canvas {
   cursor: url("Cat - Precision Select.cur"), crosshair !important;
 }
 input[type="number"] {
+  cursor: url("Cat - Vertical Resize.cur"), ns-resize !important;
+}
+::-webkit-scrollbar, ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track, ::-webkit-scrollbar-button {
   cursor: url("Cat - Vertical Resize.cur"), ns-resize !important;
 }

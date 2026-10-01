@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- CatCursorF v1.0 - Freezeezy Peak.
+<!-- CatCursorF v1.0.3 - FreezeezyPeak.
 GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com -->
 <html lang="es">
 <head>
@@ -10,8 +10,8 @@ GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.st
   <div class="calc">
     <div class="brand">
       <img id="brand-icon" class="brand-icon" src="../assets/icons/iconNormal.svg" alt="CatCursorF">
-      <span>CatCursorF v1.0</span>
-      <span class="org">Freezeezy Peak</span>
+      <span>CatCursorF v1.0.3</span>
+      <span class="org">FreezeezyPeak</span>
       <button id="btn-minimize" class="popup-control" type="button" title="Minimizar" aria-label="Minimizar">−</button>
     </div>
 
@@ -37,6 +37,12 @@ GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.st
       <div class="grid">
         <button id="btn-cursor" class="key">...</button>
         <button id="btn-sound" class="key">...</button>
+      </div>
+      <p class="sec-title" data-i18n="volTitle">VOLUMEN</p>
+      <div class="vol-list">
+        <label class="vol-row"><span data-i18n="volGeneral">Volumen General</span><input id="vol-general" type="range" min="0" max="100" step="1" value="50" aria-label="Volumen General"><b id="vol-general-val">50%</b></label>
+        <label class="vol-row"><span data-i18n="volClick">Volumen Clic</span><input id="vol-click" type="range" min="0" max="100" step="1" value="25" aria-label="Volumen Clic"><b id="vol-click-val">25%</b></label>
+        <label class="vol-row"><span data-i18n="volMeow">Volumen Maullido</span><input id="vol-meow" type="range" min="0" max="100" step="1" value="25" aria-label="Volumen Maullido"><b id="vol-meow-val">25%</b></label>
       </div>
       <p class="sec-title" data-i18n="festive">FESTIVO</p>
       <div class="grid">
@@ -179,7 +185,7 @@ GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.st
       <button class="key back" data-go="main" data-i18n="back">VOLVER</button>
     </div>
 
-    <p class="footer">Freezeezy Peak</p>
+    <p class="footer">FreezeezyPeak</p>
   </div>
   <script src="popup.js"></script>
 </body>

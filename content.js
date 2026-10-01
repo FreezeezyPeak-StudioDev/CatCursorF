@@ -1,4 +1,4 @@
-// CatCursorF v1.0 - Freezeezy Peak.
+// CatCursorF v1.0.3 - FreezeezyPeak.
 // Contenido: 8 cursores, sonidos y efecto festivo; se oculta en video/pantalla completa. / Content: 8 cursors, sounds and holiday effect; hidden on video/fullscreen.
 // GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 (() => {
@@ -25,6 +25,10 @@
   let festive = "auto";
   let stars = true;
   let clickSoundOk = true;
+  // Volumen por categoria 0-100 + general 0-100 (multiplica). / Per-category volume 0-100 + master 0-100 (multiplier).
+  let volGeneral = 50;
+  let volClick = 25;
+  let volMeow = 25;
   let lastFxKey = "none";
   let fxTimer = 0;
   let pageActive = true;
@@ -57,6 +61,9 @@
       cursor: url("${URLS.precision}"), crosshair !important;
     }
     input[type="number"] {
+      cursor: url("${URLS.vResize}"), ns-resize !important;
+    }
+    ::-webkit-scrollbar, ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track, ::-webkit-scrollbar-button {
       cursor: url("${URLS.vResize}"), ns-resize !important;
     }
   `;
@@ -188,30 +195,39 @@
   const playSound = (url, volume, onError) => {
     try {
       const audio = new Audio(url);
-      audio.volume = volume;
+      audio.volume = Math.min(1, Math.max(0, volume));
       if (onError) audio.addEventListener("error", onError, { once: true });
       const p = audio.play();
       if (p && p.catch) p.catch(() => {});
     } catch (e) {}
   };
 
+  const clampVol = (v, fb) => (typeof v === "number" && isFinite(v) ? Math.min(100, Math.max(0, Math.round(v))) : fb);
+  // Volumen final: categoria * general. / Final volume: category * master.
+  const effClick = () => (volClick / 100) * (volGeneral / 100);
+  const effMeow = () => (volMeow / 100) * (volGeneral / 100);
+
   document.addEventListener("click", () => {
     if (!master || !enabled || !soundsOn) return;
+    if (volGeneral <= 0) return;
     if (clickSoundOk) {
-      playSound(CLICK_URL, 0.35, () => { clickSoundOk = false; });
+      playSound(CLICK_URL, effClick(), () => { clickSoundOk = false; });
     }
     if (Math.random() < MEOW_CHANCE) {
-      setTimeout(() => playSound(MEOW_URL, 0.5), 120);
+      setTimeout(() => playSound(MEOW_URL, effMeow()), 120);
     }
   }, true);
 
-  browser.storage.local.get(["master", "enabled", "sounds", "theme", "festive", "stars"]).then((res) => {
+  browser.storage.local.get(["master", "enabled", "sounds", "theme", "festive", "stars", "volGeneral", "volClick", "volMeow"]).then((res) => {
     master = res.master !== false;
     enabled = res.enabled !== false;
     soundsOn = res.sounds !== false;
     if (typeof res.theme === "string") theme = res.theme;
     if (typeof res.festive === "string") festive = res.festive;
     if (res.stars === false) stars = false;
+    volGeneral = clampVol(res.volGeneral, 50);
+    volClick = clampVol(res.volClick, 25);
+    volMeow = clampVol(res.volMeow, 25);
     apply();
   }).catch(() => apply());
 
@@ -222,6 +238,9 @@
     if (changes.theme) { theme = changes.theme.newValue; lastFxKey = "none"; }
     if (changes.festive) { festive = changes.festive.newValue; lastFxKey = "none"; }
     if (changes.stars) { stars = changes.stars.newValue !== false; lastFxKey = "none"; }
+    if (changes.volGeneral) volGeneral = clampVol(changes.volGeneral.newValue, 50);
+    if (changes.volClick) volClick = clampVol(changes.volClick.newValue, 25);
+    if (changes.volMeow) volMeow = clampVol(changes.volMeow.newValue, 25);
     apply();
   });
 

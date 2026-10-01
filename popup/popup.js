@@ -1,4 +1,4 @@
-// CatCursorF v1.0 - Freezeezy Peak.
+// CatCursorF v1.0.3 - FreezeezyPeak.
 // Menu, estados, juego Shell e idioma desde _locales. / Menu, states, Shell game and locale from _locales.
 // GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 const EMAIL = "freezeezypeak.studiodev@gmail.com";
@@ -18,6 +18,8 @@ let lang = "es";
 let master = true, enabled = true, sounds = true;
 let theme = "calc", festive = "auto";
 let stars = true, autoTheme = true;
+// Volumen 0-100 por categoria: general (maestro), clic y maullido. / Volume 0-100 per category: master, click and meow.
+let volGeneral = 50, volClick = 25, volMeow = 25;
 let money = 25, bet = 2, debt = 0, statues = 0;
 let won = 0, lost = 0, streak = 0;
 let ball = -1, playing = false;
@@ -180,6 +182,14 @@ function render() {
   ab.textContent = `${txt("autotheme")}: ${autoTheme ? "ON" : "OFF"}`;
   ab.classList.toggle("is-on", autoTheme);
   ab.classList.toggle("is-off", !autoTheme);
+  // Selectores de volumen por categoria. / Per-category volume sliders.
+  const vg = $("vol-general"), vc = $("vol-click"), vm = $("vol-meow");
+  if (vg && document.activeElement !== vg) vg.value = volGeneral;
+  if (vc && document.activeElement !== vc) vc.value = volClick;
+  if (vm && document.activeElement !== vm) vm.value = volMeow;
+  if ($("vol-general-val")) $("vol-general-val").textContent = `${volGeneral}%`;
+  if ($("vol-click-val")) $("vol-click-val").textContent = `${volClick}%`;
+  if ($("vol-meow-val")) $("vol-meow-val").textContent = `${volMeow}%`;
   document.querySelectorAll(".lang-es").forEach((b) => b.classList.toggle("is-on", lang === "es"));
   document.querySelectorAll(".lang-en").forEach((b) => b.classList.toggle("is-on", lang === "en"));
   THEMES.forEach((th) => {
@@ -192,7 +202,11 @@ function render() {
 }
 
 async function saveAll() {
-  await browser.storage.local.set({ master, enabled, sounds, theme, festive, stars, autoTheme });
+  await browser.storage.local.set({ master, enabled, sounds, theme, festive, stars, autoTheme, volGeneral, volClick, volMeow });
+}
+
+async function saveVol() {
+  await browser.storage.local.set({ volGeneral, volClick, volMeow });
 }
 
 async function saveGame() {
@@ -208,7 +222,7 @@ function applyAutoTheme() {
   return false;
 }
 
-browser.storage.local.get(["master", "enabled", "sounds", "lang", "theme", "festive", "stars", "autoTheme", "money", "bet", "debt", "statues", "won", "lost", "streak"])
+browser.storage.local.get(["master", "enabled", "sounds", "lang", "theme", "festive", "stars", "autoTheme", "volGeneral", "volClick", "volMeow", "money", "bet", "debt", "statues", "won", "lost", "streak"])
   .then((res) => {
     master = res.master !== false;
     enabled = res.enabled !== false;
@@ -218,6 +232,9 @@ browser.storage.local.get(["master", "enabled", "sounds", "lang", "theme", "fest
     if (FX_ORDER.includes(res.festive)) festive = res.festive;
     if (res.stars !== false) stars = res.stars !== false;
     if (typeof res.autoTheme === "boolean") autoTheme = res.autoTheme;
+    if (typeof res.volGeneral === "number") volGeneral = Math.min(100, Math.max(0, Math.round(res.volGeneral)));
+    if (typeof res.volClick === "number") volClick = Math.min(100, Math.max(0, Math.round(res.volClick)));
+    if (typeof res.volMeow === "number") volMeow = Math.min(100, Math.max(0, Math.round(res.volMeow)));
     if (typeof res.money === "number") money = res.money;
     if (typeof res.bet === "number" && res.bet >= 0) bet = Math.floor(res.bet);
     if (typeof res.debt === "number") debt = res.debt;
@@ -260,6 +277,37 @@ $("btn-sound").addEventListener("click", async () => {
   await browser.storage.local.set({ sounds });
   render();
 });
+
+function bindVol(id, key) {
+  const el = $(id);
+  if (!el) return;
+  el.addEventListener("input", async () => {
+    const v = Math.min(100, Math.max(0, parseInt(el.value, 10) || 0));
+    if (key === "volGeneral") volGeneral = v;
+    if (key === "volClick") volClick = v;
+    if (key === "volMeow") volMeow = v;
+    const lbl = $(id + "-val");
+    if (lbl) lbl.textContent = `${v}%`;
+    await saveVol();
+  });
+  el.addEventListener("change", async () => {
+    // Probar sonido al soltar: clic para su categoria, maullido para la suya. / Preview on release.
+    try {
+      const url = key === "volMeow"
+        ? browser.runtime.getURL("assets/fx/Cat_meow.mp3")
+        : browser.runtime.getURL("assets/fx/matthewvakaliuk73627-mouse-click.mp3");
+      const base = key === "volGeneral" ? 25 : key === "volClick" ? volClick : volMeow;
+      const a = new Audio(url);
+      a.volume = Math.min(1, Math.max(0, (base / 100) * (volGeneral / 100) || 0));
+      if (a.volume > 0 && sounds && master) { const p = a.play(); if (p && p.catch) p.catch(() => {}); }
+    } catch (e) {}
+    await saveVol();
+    render();
+  });
+}
+bindVol("vol-general", "volGeneral");
+bindVol("vol-click", "volClick");
+bindVol("vol-meow", "volMeow");
 
 $("btn-festive").addEventListener("click", async () => {
   festive = FX_ORDER[(FX_ORDER.indexOf(festive) + 1) % FX_ORDER.length];
@@ -307,8 +355,9 @@ $("credits-btn").addEventListener("click", () => $("credits").classList.toggle("
 $("btn-resetall").addEventListener("click", async () => {
   master = true; enabled = true; sounds = true;
   theme = "calc"; festive = "auto"; stars = true; autoTheme = true;
+  volGeneral = 50; volClick = 25; volMeow = 25;
   lang = "es";
-  await browser.storage.local.set({ master, enabled, sounds, theme, festive, stars, autoTheme, lang });
+  await browser.storage.local.set({ master, enabled, sounds, theme, festive, stars, autoTheme, volGeneral, volClick, volMeow, lang });
   lastPopupFx = "none";
   loadLocale(lang);
 });

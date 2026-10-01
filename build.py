@@ -1,4 +1,4 @@
-"""CatCursorF v1.0.1 - Freezeezy Peak.
+"""CatCursorF v1.0.3 - FreezeezyPeak.
 GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 
 Empaqueta CatCursorF en .xpi (rutas con / para Firefox). / Packages CatCursorF as .xpi (paths with / for Firefox).
@@ -8,7 +8,7 @@ import zipfile
 from pathlib import Path
 
 root = Path(__file__).parent
-files = ["manifest.json", "content.js", "background.js", "README Freezeezy Peak.txt", "Marca Freezeezy Peak.txt"]
+files = ["manifest.json", "content.js", "background.js", "README FreezeezyPeak.txt", "Marca FreezeezyPeak.txt"]
 for folder in ["popup", "tutorial", "creditos", "licencia"]:
     files += sorted(str(p.relative_to(root)) for p in (root / folder).glob("*") if p.is_file())
 files += sorted(str(p.relative_to(root)) for p in (root / "_locales").rglob("*.json"))

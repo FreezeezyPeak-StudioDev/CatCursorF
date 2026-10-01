@@ -1,4 +1,4 @@
-/* CatCursorF v1.0 - Freezeezy Peak.
+/* CatCursorF v1.0.3 - FreezeezyPeak.
    GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com */
 /* Sin fuentes externas, pila local. / No external fonts, local stack. */
 * { box-sizing: border-box; image-rendering: pixelated; }
@@ -14,6 +14,16 @@ body p, body h1, body h2, body h3, body h4, body h5, body h6, body li, body pre,
 #screen-ajustes .key, #screen-ajustes .key * { cursor: url("../assets/cursors/Cat - Help Select.cur"), help !important; }
 
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.vol-list { display: grid; gap: 7px; margin: 6px 0; }
+.vol-row { display: grid; grid-template-columns: 1fr 110px 44px; gap: 6px; align-items: center; font-size: 10px; font-weight: bold; padding: 6px; border-radius: 6px; border: 2px solid currentColor; }
+.vol-row input[type="range"] { width: 100%; accent-color: currentColor; cursor: pointer; }
+.vol-row b { text-align: right; font-size: 10px; }
+.theme-calc .vol-row { background: #33343a; color: #f2f2f2; border-color: #777 #111 #111 #777; }
+.theme-win .vol-row { background: #c0c0c0; color: #111; }
+.theme-mc .vol-row { background: #3a2412; color: #ffd94d; border-color: #2e1c0e; }
+.theme-gd .vol-row { background: #141428; color: #eafcff; border-color: #00e5ff; }
+.theme-nav .vol-row { background: #0a5c2e; color: #fff; }
+.theme-ny .vol-row { background: #222; color: #ffe9a8; border-color: #ffd94d; }
 .key {
   font-family: inherit; font-size: 8px; text-align: center; text-decoration: none;
   display: flex; align-items: center; justify-content: center; gap: 5px;

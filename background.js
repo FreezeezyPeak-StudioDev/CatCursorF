@@ -1,4 +1,4 @@
-// CatCursorF v1.0 - Freezeezy Peak.
+// CatCursorF v1.0.3 - FreezeezyPeak.
 // Fondo: aplica/retira CSS de cursores y define valores iniciales. / Background: applies/removes cursor CSS and sets initial values.
 // GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 const cursoresAplicados = new Map();
@@ -57,6 +57,7 @@ browser.runtime.onInstalled.addListener(async (details) => {
   if (details.reason !== "install") return;
   const cur = await browser.storage.local.get([
     "master", "enabled", "sounds", "lang", "theme", "festive", "stars", "autoTheme",
+    "volGeneral", "volClick", "volMeow",
     "money", "bet", "debt", "statues", "won", "lost", "streak", "tutorialDone",
   ]);
   let lang = cur.lang;
@@ -74,6 +75,9 @@ browser.runtime.onInstalled.addListener(async (details) => {
     festive: cur.festive || "auto",
     stars: cur.stars !== false,
     autoTheme: cur.autoTheme !== false,
+    volGeneral: typeof cur.volGeneral === "number" ? cur.volGeneral : 50,
+    volClick: typeof cur.volClick === "number" ? cur.volClick : 25,
+    volMeow: typeof cur.volMeow === "number" ? cur.volMeow : 25,
     money: typeof cur.money === "number" ? cur.money : 25,
     bet: cur.bet || 0,
     debt: cur.debt || 0,
