@@ -123,7 +123,8 @@ CatCursorF/
 **Créditos:**
 - Cursores: C.T. Matthews
 - Sonido clic: Pixabay
-- Desarrollo: Freezeezy Peak
+- Sonido clic miu: FreezeezyPeak
+- Desarrollo: FreezeezyPeak
 
 ### Contribuir
 
@@ -221,7 +222,8 @@ CatCursorF/
 **Credits:**
 - Cursors: C.T. Matthews
 - Click sound: Pixabay
-- Development: Freezeezy Peak
+- Click miu sound: FreezeezyPeak
+- Development: FreezeezyPeak
 
 ### Contribute
 
