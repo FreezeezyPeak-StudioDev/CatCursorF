@@ -1,6 +1,4 @@
 
-<br>
-
 <!-- LOGO CENTRADO -->
 <div align="center">
 
@@ -14,7 +12,7 @@
 
 <div align="center">
 
-![CatCursorF](https://img.shields.io/badge/CatCursorF-v1.0.2-blue?style=for-the-badge&logo=firefox)
+![CatCursorF](https://img.shields.io/badge/CatCursorF-v1.1.0-blue?style=for-the-badge&logo=firefox)
 
 ## CatCursorF
 
@@ -36,27 +34,30 @@
 
 ### CatCursorF — Extensión Firefox con Cursores de Gato
 
-Reemplaza todos tus cursores con adorables diseños de gatos. 4 cursores contextuales, 6 temas visuales, sonidos interactivos, juego Shell con economía integrada y más. Bilingüe (ES/EN) y código abierto.
+Reemplaza todos tus cursores con adorables diseños de gatos. 8 cursores contextuales, 6 temas visuales, sonidos interactivos, juego Shell con economía integrada y más. Bilingüe (ES/EN) y código abierto.
 
 100% local • Sin cuentas • Código abierto (GPL-3.0)
 
 ### Características
 
-- **13 Cursores Personalizados** — Normal, enlace, texto, ayuda, lápiz, precisión, unavailable, redimensionamiento vertical
+- **8 Cursores Contextuales** — Normal, enlace, texto, ayuda, lápiz, precisión, no disponible, redimensionamiento vertical
 - **6 Temas Visuales** — Calculadora, Clásico, Minecraft, GeoDash, Navidad, Año Nuevo
 - **Sonidos Interactivos** — Clics y maullidos aleatorios durante la navegación
 - **Juego Shell** — Apuesta dinero, mezcla tazas, gana premios
 - **Bilingüe** — Interfaz en español e inglés
 - **Efectos Festivos** — Nieve animada y efectos especiales en fechas
+- **Estela de Patitas** — Rastro 🐾, destellos al teclear y confeti en Like/suscribirse/aceptar
+- **Auto-ocultado en Video** — El cursor se esconde solo en YouTube/Twitch tras 2,5 s quieto
 - **100% Local** — Sin nube, sin rastreo, todo en tu navegador
 
 ### Estructura del Proyecto
 
-
-## Estructura del Proyecto
-
 ```text
 CatCursorF/
+├── manifest.json                  ← Configuración
+├── content.js                     ← Cursores, sonidos y efectos en webs
+├── background.js                  ← Fondo y valores iniciales
+├── build.py                       ← Empaqueta el .xpi
 ├── popup/                         ← Menú interactivo
 ├── tutorial/                      ← Página de bienvenida
 │
@@ -65,18 +66,15 @@ CatCursorF/
 │   └── en/                        ← Traducciones inglés
 │
 ├── assets/
-│   ├── cursors/                   ← 13 archivos .cur
+│   ├── cursors/                   ← 9 archivos .cur (8 en uso)
 │   ├── fx/                        ← Archivos de audio
 │   ├── icons/                     ← Iconos por tema
 │   └── texturas/                  ← Elementos gráficos
 │
 ├── chrome/                        ← Estilos de Firefox
 ├── creditos/                      ← Página de créditos
-├── licencia/                      ← Información de licencia
-├── versiones/                     ← Historial de versiones
-│
-├── LICENSE                        ← Licencia GPL v3
-└── manifest.json                  ← Configuración
+├── licencia/                      ← Información de licencia (GPL v3)
+└── versiones/                     ← Historial de versiones
 ```
 
 
@@ -86,7 +84,7 @@ CatCursorF/
 **Menú Principal:**
 1. Click en el icono de gato en la barra de herramientas
 2. Pantalla LCD muestra el estado actual
-3. Botones: AJUSTES, IDIOMA, REDES, MÁS, JUEGO, AYUDA
+3. Botones: AJUSTES, IDIOMA, REDES, MÁS, JUEGO, LICENCIA
 
 **Cambiar Cursor:**
 - Click en AJUSTES
@@ -123,7 +121,7 @@ CatCursorF/
 **Créditos:**
 - Cursores: C.T. Matthews
 - Sonido clic: Pixabay
-- Sonido clic miu: FreezeezyPeak
+- Maullido: FreezeezyPeak
 - Desarrollo: FreezeezyPeak
 
 ### Contribuir
@@ -137,27 +135,30 @@ CatCursorF/
 
 ### CatCursorF — Firefox Extension with Cat Cursors
 
-Replace all your cursors with adorable cat designs. 4 contextual cursors, 6 visual themes, interactive sounds, integrated Shell game with economy and more. Bilingual (ES/EN) and open source.
+Replace all your cursors with adorable cat designs. 8 contextual cursors, 6 visual themes, interactive sounds, integrated Shell game with economy and more. Bilingual (ES/EN) and open source.
 
 100% local • No accounts • Open source (GPL-3.0)
 
 ### Features
 
-- **13 Custom Cursors** — Normal, link, text, help, pen, precision, unavailable, vertical resize
+- **8 Contextual Cursors** — Normal, link, text, help, pen, precision, unavailable, vertical resize
 - **6 Visual Themes** — Calculator, Classic, Minecraft, GeoDash, Christmas, New Year
 - **Interactive Sounds** — Clicks and random meows during browsing
 - **Shell Game** — Bet money, shuffle cups, win prizes
 - **Bilingual** — Interface in Spanish and English
 - **Holiday Effects** — Animated snow and special effects on dates
+- **Paw Trail** — 🐾 trail, typing sparkles and confetti on Like/subscribe/accept
+- **Video Auto-hide** — Cursor hides itself on YouTube/Twitch after 2.5 s idle
 - **100% Local** — No cloud, no tracking, everything in your browser
 
 ### Project Structure
 
-
-## Project Structure
-
 ```text
 CatCursorF/
+├── manifest.json                  ← Configuration
+├── content.js                     ← Cursors, sounds and effects on websites
+├── background.js                  ← Background and initial values
+├── build.py                       ← Packages the .xpi
 ├── popup/                         ← Interactive menu
 ├── tutorial/                      ← Welcome page
 │
@@ -166,18 +167,15 @@ CatCursorF/
 │   └── en/                        ← English translations
 │
 ├── assets/
-│   ├── cursors/                   ← 13 .cur files
+│   ├── cursors/                   ← 9 .cur files (8 in use)
 │   ├── fx/                        ← Audio files
 │   ├── icons/                     ← Icons by theme
 │   └── texturas/                  ← Graphic elements
 │
 ├── chrome/                        ← Firefox styles
 ├── creditos/                      ← Credits page
-├── licencia/                      ← License information
-├── versiones/                     ← Version history
-│
-├── LICENSE                        ← GPL v3
-└── manifest.json                  ← Configuration
+├── licencia/                      ← License information (GPL v3)
+└── versiones/                     ← Version history
 ```
 
 ### How to Use
@@ -185,7 +183,7 @@ CatCursorF/
 **Main Menu:**
 1. Click the cat icon in Firefox toolbar
 2. LCD screen shows current status
-3. Buttons: SETTINGS, LANGUAGE, NETWORKS, MORE, GAME, HELP
+3. Buttons: SETTINGS, LANGUAGE, NETWORKS, MORE, GAME, LICENSE
 
 **Change Cursor:**
 - Click SETTINGS
@@ -222,7 +220,7 @@ CatCursorF/
 **Credits:**
 - Cursors: C.T. Matthews
 - Click sound: Pixabay
-- Click miu sound: FreezeezyPeak
+- Meow sound: FreezeezyPeak
 - Development: FreezeezyPeak
 
 ### Contribute

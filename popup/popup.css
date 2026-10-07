@@ -1,4 +1,4 @@
-/* CatCursorF v1.0.3 - FreezeezyPeak.
+/* CatCursorF v1.1.0 - FreezeezyPeak.
    GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com */
 /* Sin fuentes externas, pila local. / No external fonts, local stack. */
 * { box-sizing: border-box; image-rendering: pixelated; }
@@ -221,3 +221,8 @@ body.theme-ny { background: #000; color: #ffe9a8; }
 .theme-ny .panel { margin-top: 8px; background: #1a1a1a; color: #ffe9a8; border: 2px dashed #ffd94d; border-radius: 6px; padding: 8px; font-size: 7px; word-break: break-word; }
 .theme-ny .panel a { color: #ffe9a8; }
 .theme-ny .footer { margin: 12px 0 0; text-align: center; font-size: 7px; color: #ffd94d; }
+
+/* ============ GATO OIIA (victoria) ============ */
+@keyframes catspin { from { transform: translate(-50%,-50%) rotate(0deg); } to { transform: translate(-50%,-50%) rotate(360deg); } }
+.oiiacat { position: fixed; left: 50%; top: 38%; font-size: 54px; line-height: 1; z-index: 99; pointer-events: none; animation: catspin 0.55s linear infinite; }
+body.oiiacursor, body.oiiacursor * { cursor: none !important; }

@@ -174,7 +174,7 @@
     "message": "1. Tu cursor gato"
   },
   "t1b": {
-    "message": "Al activar la extension, todas las paginas web usan los 8 cursores de gato: normal para todo, clic en links y botones, lapiz en campos de texto, texto en zonas editables, ayuda, precision en canvas, redimension vertical en numeros y no disponible en deshabilitados. Al hacer clic suena un clic y, de vez en cuando (8%), un maullido."
+    "message": "Al activar la extension, todas las paginas web usan los 8 cursores de gato: normal para todo, clic en links y botones, lapiz en campos de texto, texto en zonas editables, ayuda, precision en canvas, redimension vertical en numeros y no disponible en deshabilitados. Al hacer clic suena un clic y, de vez en cuando (8%), un maullido. Dar Like, suscribirse o aceptar muestra confeti gatuno; al teclear salen destellos; la estela de patitas sigue al cursor; y en videos el cursor se oculta solo."
   },
   "t2t": {
     "message": "2. Anclarla para acceso rapido"
@@ -192,7 +192,7 @@
     "message": "4. Ajustes, idioma y temas"
   },
   "t4b": {
-    "message": "En AJUSTES estan: Cursor ON/OFF, Sonido ON/OFF, Volumen General / Volumen Clic / Volumen Maullido (0-100, el General multiplica a los otros), Festivo AUTO/SIEMPRE/OFF (nieve en navidad y dorado en año nuevo), Idioma ES/EN y 6 Temas: Calculadora, Clasico, Minecraft, GeoDash, Navidad y Año Nuevo. El icono de la barra cambia segun el tema. El idioma se cambia tambien desde el boton IDIOMA del menu."
+    "message": "En AJUSTES estan: Cursor ON/OFF, Sonido ON/OFF, Volumen General / Volumen Clic / Volumen Maullido (0-100, el General multiplica a los otros), Festivo AUTO/SIEMPRE/OFF (nieve en navidad y dorado en año nuevo), Estela ON/OFF (patitas y destellos al teclear), Idioma ES/EN y 6 Temas: Calculadora, Clasico, Minecraft, GeoDash, Navidad y Año Nuevo. El icono de la barra cambia segun el tema. El idioma se cambia tambien desde el boton IDIOMA del menu."
   },
   "t5t": {
     "message": "5. Redes, Mi Web y correo"
@@ -238,6 +238,30 @@
   },
   "stars": {
     "message": "Estrellas"
+  },
+  "trail": {
+    "message": "Estela"
+  },
+  "diag": {
+    "message": "DIAGNÓSTICO"
+  },
+  "diagBtn": {
+    "message": "PROBAR ESTA PESTAÑA"
+  },
+  "diagOk": {
+    "message": "✔ Script activo en esta pestaña."
+  },
+  "diagBlocked": {
+    "message": "⛔ Firefox bloquea extensiones en esta página. Prueba en otra web (ej. example.com)."
+  },
+  "diagNoScript": {
+    "message": "✖ El script no responde aquí (página restringida o sin permiso). Recarga la pestaña."
+  },
+  "diagFail": {
+    "message": "? No se pudo comprobar."
+  },
+  "diagCurBlocked": {
+    "message": "✖ Esta página no puede cargar los .cur (recurso bloqueado)."
   },
   "autotheme": {
     "message": "Tema auto"
@@ -285,6 +309,6 @@
     "message": "LICENCIA CatCursorF"
   },
   "licBody": {
-    "message": "<h2>CATCURSORF - Extensión de Cursor Firefox</h2><p><b>Descripción:</b> reemplaza los cursores del navegador con gatos personalizados. 8 cursores contextuales, sonidos, temas visuales, juego interactivo y soporte bilingüe.</p><h2>Características</h2><p>8 cursores de gato · sonidos (maullido 8% + clic) · 6 temas visuales · panel con ajustes en tiempo real · juego Shell (apuestas libres, trabajo, préstamos, estatua) · efectos festivos automáticos · ES/EN · funciona en webs, iframes y páginas especiales · todo local.</p><h2>Requisitos técnicos</h2><p>Firefox 109 o superior. Windows 7+ y Linux. Unos 3 MB.</p><h2>Instalación</h2><p>Desarrollo: about:debugging, Este Firefox, Cargar extensión temporal, carpeta CatCursorF. Pública: addons.mozilla.org, buscar CatCursorF, Agregar a Firefox.</p><h2>Estructura del proyecto</h2><p>manifest.json · background.js · content.js · popup/ · tutorial/ · creditos/ · licencia/ · _locales/es+en/ · assets/{cursors, fx, icons, texturas} · chrome/ · versiones/ · build.py</p><h2>Guía de uso</h2><p>Icono gato: apagado total y estados en la pantalla. AJUSTES: cursor, sonido, festivo, estrellas, tema auto, idioma y 6 temas. IDIOMA: ES/EN instantáneo. REDES: YouTube, GitHub, GitLab, correo, AMO, Mi Web e itch.io. MÁS: tutorial, créditos y README. LICENCIA: este texto. JUEGO: apuesta lo que quieras (0 permitido, TODO para todo), gana el doble, trabaja +0.25, préstamos 10/50/100, a 0 es game over; meta: estatua de 1,000,000$$.</p><h2>Sistema de cursores</h2><p>Normal, Link, Pen, Text, Help, Unavailable, Precision y Vertical, según el contexto del elemento.</p><h2>Efectos de audio</h2><p>Clic en cada clic (Pixabay). Maullido 8% por clic (propio). Nieve 25 nov-25 ene y dorado 31 dic/1 ene, desactivables; se ocultan en video y pantalla completa.</p><h2>Permisos</h2><p>Mínimos: webs &lt;all_urls&gt; (cursores), storage local (ajustes), tabs (tutorial) y portapapeles (copiar email). Nada de historial, contraseñas ni datos personales.</p><h2>Solución de problemas</h2><p>Sin cursor: F5 y revisa ENCENDIDO. Sin sonido: volumen y AJUSTES. Home/ajustes: instalar chrome/LEEME.txt, activar la preferencia y reiniciar. La temporal se descarga al cerrar: recarga en about:debugging. Datos del juego: locales, se pierden al limpiar caché.</p><h2>Temas visuales</h2><p>Calculadora (retro), Clásico (neutral), Minecraft (bloques), GeoDash (neón), Navidad (rojo/verde/dorado) y Año Nuevo (dorado).</p><h2>Información técnica</h2><p>JavaScript, HTML5, CSS3, WebExtensions API. Cursores .cur, audio MP3, storage local. ES/EN. Firefox 109+ en Windows y Linux.</p><h2>Créditos</h2><p>Cursores: DUCK_BERET, de Hyper Bun Buster (ctmatthews.itch.io/polite-cat-mouse-cursor). Clic: Pixabay. Maullido: original FreezeezyPeak. Desarrollo: FreezeezyPeak.</p><h2>Licencia GPL v3</h2><p>Permitido: uso personal y comercial, modificar y distribuir. Requerido: atribución a Freezezy Peak, documentar cambios y misma licencia. Prohibido: atribuirse la autoría, vender sin autorización o quitar atribuciones. Contacto: canales oficiales de Freezezy Peak.</p><h2>Contacto</h2><p>Freezezy Peak: GitHub, YouTube, GitLab, itch.io. Bugs o sugerencias: GitHub Issues.</p><h2>Historial</h2><p>V1.0: licencia actualizada, juego con estatua, 6 temas, festivo inteligente. VERSIÓN: 1.0 · FECHA: 2026-09-18 · Freezezy Peak.</p>"
+    "message": "<h2>CATCURSORF - Extensión de Cursor Firefox</h2><p><b>Descripción:</b> reemplaza los cursores del navegador con gatos personalizados. 8 cursores contextuales, sonidos, temas visuales, juego interactivo y soporte bilingüe.</p><h2>Características</h2><p>8 cursores de gato · sonidos (maullido 8% + clic) · 6 temas visuales · panel con ajustes en tiempo real · juego Shell (apuestas libres, trabajo, préstamos, estatua) · efectos festivos automáticos · estela, celebraciones y auto-ocultado en video · ES/EN · funciona en webs, iframes y páginas especiales · todo local.</p><h2>Requisitos técnicos</h2><p>Firefox 109 o superior. Windows 7+ y Linux. Unos 3 MB.</p><h2>Instalación</h2><p>Desarrollo: about:debugging, Este Firefox, Cargar extensión temporal, carpeta CatCursorF. Pública: addons.mozilla.org, buscar CatCursorF, Agregar a Firefox.</p><h2>Estructura del proyecto</h2><p>manifest.json · background.js · content.js · popup/ · tutorial/ · creditos/ · licencia/ · _locales/es+en/ · assets/{cursors, fx, icons, texturas} · chrome/ · versiones/ · build.py</p><h2>Guía de uso</h2><p>Icono gato: apagado total y estados en la pantalla. AJUSTES: cursor, sonido, festivo, estrellas, estela, tema auto, idioma y 6 temas. IDIOMA: ES/EN instantáneo. REDES: YouTube, GitHub, GitLab, correo, AMO, Mi Web e itch.io. MÁS: tutorial, créditos y README. LICENCIA: este texto. JUEGO: apuesta lo que quieras (0 permitido, TODO para todo), gana el doble, trabaja +0.25, préstamos 10/50/100, a 0 es game over; meta: estatua de 1,000,000$$.</p><h2>Sistema de cursores</h2><p>Normal, Link, Pen, Text, Help, Unavailable, Precision y Vertical, según el contexto del elemento.</p><h2>Efectos de audio</h2><p>Clic en cada clic (Pixabay). Maullido 8% por clic (propio). Nieve 25 nov-25 ene y dorado 31 dic/1 ene, desactivables; se ocultan en video y pantalla completa.</p><h2>Permisos</h2><p>Mínimos: webs &lt;all_urls&gt; (cursores), storage local (ajustes), tabs (tutorial) y portapapeles (copiar email). Nada de historial, contraseñas ni datos personales.</p><h2>Solución de problemas</h2><p>Sin cursor: F5 y revisa ENCENDIDO. Sin sonido: volumen y AJUSTES. Home/ajustes: instalar chrome/LEEME.txt, activar la preferencia y reiniciar. La temporal se descarga al cerrar: recarga en about:debugging. Datos del juego: locales, se pierden al limpiar caché.</p><h2>Temas visuales</h2><p>Calculadora (retro), Clásico (neutral), Minecraft (bloques), GeoDash (neón), Navidad (rojo/verde/dorado) y Año Nuevo (dorado).</p><h2>Información técnica</h2><p>JavaScript, HTML5, CSS3, WebExtensions API. Cursores .cur, audio MP3, storage local. ES/EN. Firefox 109+ en Windows y Linux.</p><h2>Créditos</h2><p>Cursores: DUCK_BERET, de Hyper Bun Buster (ctmatthews.itch.io/polite-cat-mouse-cursor). Clic: Pixabay. Maullido: original FreezeezyPeak. Desarrollo: FreezeezyPeak.</p><h2>Licencia GPL v3</h2><p>Permitido: uso personal y comercial, modificar y distribuir. Requerido: atribución a Freezezy Peak, documentar cambios y misma licencia. Prohibido: atribuirse la autoría, vender sin autorización o quitar atribuciones. Contacto: canales oficiales de Freezezy Peak.</p><h2>Contacto</h2><p>Freezezy Peak: GitHub, YouTube, GitLab, itch.io. Bugs o sugerencias: GitHub Issues.</p><h2>Historial</h2><p>V1.0: licencia actualizada, juego con estatua, 6 temas, festivo inteligente. VERSIÓN: 1.0 · FECHA: 2026-09-18 · Freezezy Peak.</p>"
   }
 }

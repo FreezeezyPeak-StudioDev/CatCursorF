@@ -1,10 +1,12 @@
-// CatCursorF v1.0.3 - FreezeezyPeak.
-// Fondo: aplica/retira CSS de cursores y define valores iniciales. / Background: applies/removes cursor CSS and sets initial values.
+// CatCursorF v1.1.0 - FreezeezyPeak.
+// Fondo: aplica/retira CSS de cursores, conserva valores por defecto y comparte cursores. / Background: applies/removes cursor CSS, backfills defaults and shares cursors.
 // GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 const cursoresAplicados = new Map();
 
 browser.runtime.onMessage.addListener(async (mensaje, origen) => {
   if (!origen.tab || !mensaje || !mensaje.type) return;
+  // Solo estos tipos tocan el CSS; otros mensajes (diagnostico, etc.) no deben borrarlo.
+  if (mensaje.type !== "cursor-aplicar" && mensaje.type !== "cursor-retirar") return;
   const marco = typeof origen.frameId === "number" ? origen.frameId : 0;
   const clave = `${origen.tab.id}:${marco}`;
   const anterior = cursoresAplicados.get(clave);
@@ -52,41 +54,33 @@ if (browser.runtime.onMessageExternal) {
   });
 }
 
-// Valores iniciales y tutorial de bienvenida al instalar. / Initial values and welcome tutorial on install.
+// Valores por defecto sin borrar datos: solo rellena claves que falten.
+// Funciona en instalacion y en actualizaciones. / Backfill defaults without wiping user data.
+const DEFAULTS = {
+  master: true, enabled: true, sounds: true,
+  theme: "calc", festive: "auto", stars: true, autoTheme: true, trail: true,
+  volGeneral: 50, volClick: 25, volMeow: 25,
+  money: 25, bet: 0, debt: 0, statues: 0, won: 0, lost: 0, streak: 0,
+  tutorialDone: false,
+};
+async function ensureDefaults() {
+  try {
+    const cur = await browser.storage.local.get(Object.keys(DEFAULTS).concat(["lang"]));
+    const fill = {};
+    for (const [k, v] of Object.entries(DEFAULTS)) {
+      if (cur[k] === undefined) fill[k] = v;
+    }
+    if (cur.lang !== "en" && cur.lang !== "es") {
+      try {
+        fill.lang = browser.i18n.getUILanguage().toLowerCase().startsWith("en") ? "en" : "es";
+      } catch (e) { fill.lang = "es"; }
+    }
+    if (Object.keys(fill).length) await browser.storage.local.set(fill);
+  } catch (e) {}
+}
 browser.runtime.onInstalled.addListener(async (details) => {
+  await ensureDefaults();
   if (details.reason !== "install") return;
-  const cur = await browser.storage.local.get([
-    "master", "enabled", "sounds", "lang", "theme", "festive", "stars", "autoTheme",
-    "volGeneral", "volClick", "volMeow",
-    "money", "bet", "debt", "statues", "won", "lost", "streak", "tutorialDone",
-  ]);
-  let lang = cur.lang;
-  if (lang !== "en" && lang !== "es") {
-    try {
-      lang = browser.i18n.getUILanguage().toLowerCase().startsWith("en") ? "en" : "es";
-    } catch (e) { lang = "es"; }
-  }
-  await browser.storage.local.set({
-    master: cur.master !== false,
-    enabled: cur.enabled !== false,
-    sounds: cur.sounds !== false,
-    lang,
-    theme: cur.theme || "calc",
-    festive: cur.festive || "auto",
-    stars: cur.stars !== false,
-    autoTheme: cur.autoTheme !== false,
-    volGeneral: typeof cur.volGeneral === "number" ? cur.volGeneral : 50,
-    volClick: typeof cur.volClick === "number" ? cur.volClick : 25,
-    volMeow: typeof cur.volMeow === "number" ? cur.volMeow : 25,
-    money: typeof cur.money === "number" ? cur.money : 25,
-    bet: cur.bet || 0,
-    debt: cur.debt || 0,
-    statues: cur.statues || 0,
-    won: cur.won || 0,
-    lost: cur.lost || 0,
-    streak: cur.streak || 0,
-    tutorialDone: cur.tutorialDone || false,
-  });
   browser.tabs.create({ url: browser.runtime.getURL("tutorial/tutorial.html") });
 });
 

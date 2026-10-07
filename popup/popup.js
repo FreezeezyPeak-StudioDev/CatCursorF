@@ -1,5 +1,5 @@
-// CatCursorF v1.0.3 - FreezeezyPeak.
-// Menu, estados, juego Shell e idioma desde _locales. / Menu, states, Shell game and locale from _locales.
+// CatCursorF v1.1.0 - FreezeezyPeak.
+// Menu, estados, juego Shell, diagnostico e idioma desde _locales. / Menu, states, Shell game, diagnosis and locale from _locales.
 // GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 const EMAIL = "freezeezypeak.studiodev@gmail.com";
 const STATUE_COST = 1000000;
@@ -17,7 +17,7 @@ const FX_ORDER = ["auto", "siempre", "off"];
 let lang = "es";
 let master = true, enabled = true, sounds = true;
 let theme = "calc", festive = "auto";
-let stars = true, autoTheme = true;
+let stars = true, autoTheme = true, trail = true;
 // Volumen 0-100 por categoria: general (maestro), clic y maullido. / Volume 0-100 per category: master, click and meow.
 let volGeneral = 50, volClick = 25, volMeow = 25;
 let money = 25, bet = 2, debt = 0, statues = 0;
@@ -182,6 +182,12 @@ function render() {
   ab.textContent = `${txt("autotheme")}: ${autoTheme ? "ON" : "OFF"}`;
   ab.classList.toggle("is-on", autoTheme);
   ab.classList.toggle("is-off", !autoTheme);
+  const tb = $("btn-trail");
+  if (tb) {
+    tb.textContent = `${txt("trail")}: ${trail ? "ON" : "OFF"}`;
+    tb.classList.toggle("is-on", trail);
+    tb.classList.toggle("is-off", !trail);
+  }
   // Selectores de volumen por categoria. / Per-category volume sliders.
   const vg = $("vol-general"), vc = $("vol-click"), vm = $("vol-meow");
   if (vg && document.activeElement !== vg) vg.value = volGeneral;
@@ -202,7 +208,7 @@ function render() {
 }
 
 async function saveAll() {
-  await browser.storage.local.set({ master, enabled, sounds, theme, festive, stars, autoTheme, volGeneral, volClick, volMeow });
+  await browser.storage.local.set({ master, enabled, sounds, theme, festive, stars, autoTheme, trail, volGeneral, volClick, volMeow });
 }
 
 async function saveVol() {
@@ -222,7 +228,7 @@ function applyAutoTheme() {
   return false;
 }
 
-browser.storage.local.get(["master", "enabled", "sounds", "lang", "theme", "festive", "stars", "autoTheme", "volGeneral", "volClick", "volMeow", "money", "bet", "debt", "statues", "won", "lost", "streak"])
+browser.storage.local.get(["master", "enabled", "sounds", "lang", "theme", "festive", "stars", "autoTheme", "trail", "volGeneral", "volClick", "volMeow", "money", "bet", "debt", "statues", "won", "lost", "streak"])
   .then((res) => {
     master = res.master !== false;
     enabled = res.enabled !== false;
@@ -232,6 +238,7 @@ browser.storage.local.get(["master", "enabled", "sounds", "lang", "theme", "fest
     if (FX_ORDER.includes(res.festive)) festive = res.festive;
     if (res.stars !== false) stars = res.stars !== false;
     if (typeof res.autoTheme === "boolean") autoTheme = res.autoTheme;
+    if (res.trail !== false) trail = res.trail !== false;
     if (typeof res.volGeneral === "number") volGeneral = Math.min(100, Math.max(0, Math.round(res.volGeneral)));
     if (typeof res.volClick === "number") volClick = Math.min(100, Math.max(0, Math.round(res.volClick)));
     if (typeof res.volMeow === "number") volMeow = Math.min(100, Math.max(0, Math.round(res.volMeow)));
@@ -331,6 +338,41 @@ $("btn-autotheme").addEventListener("click", async () => {
   render();
 });
 
+const _trailBtn = $("btn-trail");
+if (_trailBtn) _trailBtn.addEventListener("click", async () => {
+  trail = !trail;
+  await browser.storage.local.set({ trail });
+  render();
+});
+
+// Diagnostico: comprueba si el script de contenido responde en la pestana activa. / Diagnosis: checks if the content script answers on the active tab.
+const _diagBtn = $("btn-diag");
+if (_diagBtn) _diagBtn.addEventListener("click", async () => {
+  const msg = $("diag-msg");
+  const say = (k) => { if (msg) msg.textContent = txt(k); };
+  try {
+    const tabs = await browser.tabs.query({ active: true, currentWindow: true });
+    const tab = tabs && tabs[0];
+    if (!tab) { say("diagFail"); return; }
+    const url = tab.url || "";
+    if (/^(about:|view-source:|moz-extension:|file:)/.test(url) ||
+        /^https:\/\/(addons\.mozilla\.org|accounts\.firefox\.com|support\.mozilla\.org)(\/|$)/.test(url)) {
+      say("diagBlocked");
+      return;
+    }
+    try {
+      const res = await browser.tabs.sendMessage(tab.id, { type: "cat-ping-ask" });
+      if (!res || !res.alive) { say("diagNoScript"); return; }
+      if (res.curOk === false) { say("diagCurBlocked"); return; }
+      say("diagOk");
+    } catch (e) {
+      say("diagNoScript");
+    }
+  } catch (e) {
+    say("diagFail");
+  }
+});
+
 document.querySelectorAll(".lang-es").forEach((b) => b.addEventListener("click", async () => {
   lang = "es"; await browser.storage.local.set({ lang }); loadLocale(lang);
 }));
@@ -354,10 +396,10 @@ $("credits-btn").addEventListener("click", () => $("credits").classList.toggle("
 
 $("btn-resetall").addEventListener("click", async () => {
   master = true; enabled = true; sounds = true;
-  theme = "calc"; festive = "auto"; stars = true; autoTheme = true;
+  theme = "calc"; festive = "auto"; stars = true; autoTheme = true; trail = true;
   volGeneral = 50; volClick = 25; volMeow = 25;
   lang = "es";
-  await browser.storage.local.set({ master, enabled, sounds, theme, festive, stars, autoTheme, volGeneral, volClick, volMeow, lang });
+  await browser.storage.local.set({ master, enabled, sounds, theme, festive, stars, autoTheme, trail, volGeneral, volClick, volMeow, lang });
   lastPopupFx = "none";
   loadLocale(lang);
 });
@@ -543,11 +585,48 @@ $("g-repay").addEventListener("click", async () => {
   await saveGame(); render();
 });
 
+// Gato OIIA girando al comprar la estatua (meta llena). / Spinning OIIA cat on statue purchase.
+function spinVictory() {
+  try {
+    const scr = $("screen-juego");
+    if (!scr) return;
+    const old = scr.querySelector(".oiiacat");
+    if (old) old.remove();
+    const d = document.createElement("div");
+    d.className = "oiiacat";
+    const im = document.createElement("img");
+    im.src = BRAND_ICONS[theme] || BRAND_ICONS.calc;
+    im.width = 64;
+    im.height = 64;
+    im.alt = "";
+    d.appendChild(im);
+    d.setAttribute("aria-hidden", "true");
+    document.body.appendChild(d);
+    // El cursor SE VUELVE el gato durante la victoria. / The cursor BECOMES the cat.
+    document.body.classList.add("oiiacursor");
+    const mv = (e) => {
+      try {
+        if (e && typeof e.clientX === "number") {
+          d.style.left = e.clientX + "px";
+          d.style.top = e.clientY + "px";
+        }
+      } catch (err) {}
+    };
+    document.addEventListener("mousemove", mv);
+    setTimeout(() => {
+      try { document.removeEventListener("mousemove", mv); } catch (e) {}
+      try { document.body.classList.remove("oiiacursor"); } catch (e) {}
+      if (d.isConnected) d.remove();
+    }, 2200);
+  } catch (e) {}
+}
+
 $("g-buy").addEventListener("click", async () => {
   if (playing || money < STATUE_COST) return;
   money = round2(money - STATUE_COST);
   statues++;
   $("g-msg").textContent = txt("victory");
+  spinVictory();
   await saveGame(); render();
 });
 

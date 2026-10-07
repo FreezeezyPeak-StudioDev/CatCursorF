@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "CatCursorF",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "...",
   "default_locale": "es",
   
@@ -45,7 +45,11 @@
   
   "web_accessible_resources": [
     {
-      "resources": ["assets/cursors/*", "assets/fx/*"],
+      "resources": ["assets/cursors/*", "assets/fx/*", "assets/icons/*"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["assets/cursors/*"],
       "matches": ["<all_urls>"],
       "extension_ids": ["darksnowf@freezeezy.peak"]
     }

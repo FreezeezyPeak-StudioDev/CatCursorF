@@ -1,4 +1,4 @@
-/* CatCursorF v1.0.3 - FreezeezyPeak.
+/* CatCursorF v1.1.0 - FreezeezyPeak.
    GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com */
 /* Interfaz del navegador. Copiar con los 8 .cur a <perfil>/chrome/. / Browser UI. Copy with the 8 .cur files to <profile>/chrome/.
    Requiere toolkit.legacyUserProfileCustomizations.stylesheets = true. / Requires toolkit.legacyUserProfileCustomizations.stylesheets = true. */
@@ -18,6 +18,10 @@ input, textbox, searchbar-textbox,
   cursor: url("Cat - Pen.cur"), text !important;
 }
 
-[disabled="true"], [disabled] {
+[disabled="true"], [disabled],
+[disabled="true"] *, [disabled] *,
+[aria-disabled="true"], [aria-disabled="true"] *,
+[inert], [inert] *,
+.disabled, .disabled *, .is-disabled, .is-disabled * {
   cursor: url("Cat - Unavailable.cur"), not-allowed !important;
 }
