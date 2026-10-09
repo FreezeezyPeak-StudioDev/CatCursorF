@@ -1,4 +1,4 @@
-// CatCursorF v1.1.0 - FreezeezyPeak.
+// CatCursorF v1.1.1 - FreezeezyPeak.
 // Fondo: aplica/retira CSS de cursores, conserva valores por defecto y comparte cursores. / Background: applies/removes cursor CSS, backfills defaults and shares cursors.
 // GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 const cursoresAplicados = new Map();

@@ -1,4 +1,4 @@
-// CatCursorF v1.1.0 - FreezeezyPeak.
+// CatCursorF v1.1.1 - FreezeezyPeak.
 // Menu, estados, juego Shell, diagnostico e idioma desde _locales. / Menu, states, Shell game, diagnosis and locale from _locales.
 // GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 const EMAIL = "freezeezypeak.studiodev@gmail.com";
@@ -602,8 +602,9 @@ function spinVictory() {
     d.appendChild(im);
     d.setAttribute("aria-hidden", "true");
     document.body.appendChild(d);
-    // El cursor SE VUELVE el gato durante la victoria. / The cursor BECOMES the cat.
-    document.body.classList.add("oiiacursor");
+    // El gato es un acompañante: NO ocultar el cursor para no bloquear la UI.
+    // The cat is a companion: do NOT hide the cursor.
+    try { document.body.classList.remove("oiiacursor"); } catch (e) {}
     const mv = (e) => {
       try {
         if (e && typeof e.clientX === "number") {

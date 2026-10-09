@@ -1,15 +1,15 @@
 ================================================================================
-FINGERPRINT - CatCursorF v1.1.0
+FINGERPRINT - CatCursorF v1.1.1
 ================================================================================
 
-BUILD_HASH: 4F4E9011D260C1E4D647E013
+BUILD_HASH: A28D690D244566BF7E2EF7E6
 AUTHOR: FreezeezyPeak
 GITHUB: github.com/FreezeezyPeak-StudioDev
 GITLAB: gitlab.com/freezeezypeak.studiodev
 EMAIL: freezeezypeak.studiodev@gmail.com
-DATE: 2026-10-07
-PACKAGE: versiones/catcursorf-1.1.0.xpi
-CHECKSUM_SHA256: 4f4e9011d260c1e4d647e01394c05af0a22f5fab6fe962643ba9ffdc7327daf1
+DATE: 2026-10-08
+PACKAGE: versiones/catcursorf-1.1.1.xpi
+CHECKSUM_SHA256: a28d690d244566bf7e2ef7e6f380b0f4c648b8ffbd793410ecb8138fa9b691c0
 SIGNATURE: FP-2026-CATCURSOR-FREEZEEZYPEAK
 
 Esta huella identifica la compilación indicada. El valor SHA-256 permite

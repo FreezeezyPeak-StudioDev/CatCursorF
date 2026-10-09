@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "CatCursorF",
-  "version": "1.1.0",
-  "description": "...",
+  "version": "1.1.1",
+  "description": "Cursores de gato personalizables: 8 cursores contextuales, 6 temas, sonidos, juego Shell y efectos festivos. 100% local.",
   "default_locale": "es",
   
   "browser_specific_settings": {

@@ -1,4 +1,4 @@
-// CatCursorF v1.1.0 - FreezeezyPeak.
+// CatCursorF v1.1.1 - FreezeezyPeak.
 // Tutorial con idioma desde _locales. / Tutorial with locale from _locales.
 // GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 let lang = "es";

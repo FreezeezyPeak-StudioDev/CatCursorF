@@ -12,7 +12,7 @@
 
 <div align="center">
 
-![CatCursorF](https://img.shields.io/badge/CatCursorF-v1.1.0-blue?style=for-the-badge&logo=firefox)
+![CatCursorF](https://img.shields.io/badge/CatCursorF-v1.1.1-blue?style=for-the-badge&logo=firefox)
 
 ## CatCursorF
 
@@ -38,6 +38,12 @@ Reemplaza todos tus cursores con adorables diseños de gatos. 8 cursores context
 
 100% local • Sin cuentas • Código abierto (GPL-3.0)
 
+### Novedades v1.1.1
+
+- **Gato orbital** — La celebración de inicio/cierre de sesión y suscripción ya no oculta el cursor: el gato gira suavemente alrededor del puntero, siempre por delante del contenido y sin bloquear la interfaz.
+- **Nueva celebración de cierre de sesión** (además de inicio de sesión).
+- La victoria del minijuego del panel tampoco oculta ya el cursor.
+
 ### Características
 
 - **8 Cursores Contextuales** — Normal, enlace, texto, ayuda, lápiz, precisión, no disponible, redimensionamiento vertical
@@ -46,7 +52,7 @@ Reemplaza todos tus cursores con adorables diseños de gatos. 8 cursores context
 - **Juego Shell** — Apuesta dinero, mezcla tazas, gana premios
 - **Bilingüe** — Interfaz en español e inglés
 - **Efectos Festivos** — Nieve animada y efectos especiales en fechas
-- **Estela de Patitas** — Rastro 🐾, destellos al teclear y confeti en Like/suscribirse/aceptar
+- **Estela de Patitas** — Rastro 🐾, destellos al teclear, confeti en Like/suscripción/inicio-cierre de sesión y gato orbital que celebra sin ocultar el cursor
 - **Auto-ocultado en Video** — El cursor se esconde solo en YouTube/Twitch tras 2,5 s quieto
 - **100% Local** — Sin nube, sin rastreo, todo en tu navegador
 
@@ -139,6 +145,12 @@ Replace all your cursors with adorable cat designs. 8 contextual cursors, 6 visu
 
 100% local • No accounts • Open source (GPL-3.0)
 
+### What's new in v1.1.1
+
+- **Orbiting cat** — Sign-in/sign-out and subscribe celebrations no longer hide the cursor: the cat smoothly orbits the pointer, always on top of page content and never blocking the UI.
+- **New sign-out celebration** (in addition to sign-in).
+- The panel mini-game victory no longer hides the cursor either.
+
 ### Features
 
 - **8 Contextual Cursors** — Normal, link, text, help, pen, precision, unavailable, vertical resize
@@ -147,7 +159,7 @@ Replace all your cursors with adorable cat designs. 8 contextual cursors, 6 visu
 - **Shell Game** — Bet money, shuffle cups, win prizes
 - **Bilingual** — Interface in Spanish and English
 - **Holiday Effects** — Animated snow and special effects on dates
-- **Paw Trail** — 🐾 trail, typing sparkles and confetti on Like/subscribe/accept
+- **Paw Trail** — 🐾 trail, typing sparkles, confetti on Like/subscribe/sign-in-sign-out and an orbiting cat that celebrates without hiding the cursor
 - **Video Auto-hide** — Cursor hides itself on YouTube/Twitch after 2.5 s idle
 - **100% Local** — No cloud, no tracking, everything in your browser
 

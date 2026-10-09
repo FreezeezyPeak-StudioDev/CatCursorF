@@ -1,4 +1,4 @@
-// CatCursorF v1.1.0 - FreezeezyPeak.
+// CatCursorF v1.1.1 - FreezeezyPeak.
 // Contenido: cursores contextuales, sonidos, estela, celebraciones y efecto festivo; auto-ocultado en video. / Content: contextual cursors, sounds, trail, celebrations and festive effect; auto-hide on video.
 // GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 (() => {
@@ -370,6 +370,7 @@
 
   const apply = () => {
     if (!document.head && !document.documentElement) return;
+    try { cleanLegacyOiia(); } catch (e) {}
     let el = document.getElementById("cat-cursor-style");
     // Si toca ocultar (video idle/fullscreen): quitar cursor custom y forzar none.
     if (master && enabled && cursorAutoHidden) {
@@ -478,6 +479,7 @@
       if (t.includes("suscrib") || t.includes("subscrib")) return "subscribe";
       if (t.includes("google") && /(sign|iniciar|continuar|continue|acceder|log)/.test(t)) return "login";
       if (/(iniciar sesi|sign in|log in|log-in)/.test(t)) return "login";
+      if (/(cerrar sesi|close session|sign out|log out|log-out|desconectar|deconnexion|abmelden)/.test(t)) return "logout";
       if (/\b(borrar|eliminar|delete|remove|quitar|papelera|trash|vaciar|descartar|discard)\b/.test(t)) return "delete";
       if (/\b(aceptar|accept|ok|de acuerdo|entendido|got it|continuar|continue|confirmar|confirm|guardar|save|enviar|send|vale|dale|listo|done)\b/.test(t)) return "accept";
     } catch (e) {}
@@ -543,52 +545,106 @@
     return null;
   }
 
+  // Guardia anti-apilado: evita varias celebraciones solapadas que alarguen el efecto.
+  let oiiaActive = false;
+  // Limpieza de restos de versiones anteriores que ocultaban el cursor (cursor:none).
+  function cleanLegacyOiia() {
+    try { if (document.documentElement) document.documentElement.classList.remove("cat-oiia-cursor"); } catch (e) {}
+    try { const st = document.getElementById("cat-oiia-style"); if (st) st.remove(); } catch (e) {}
+  }
+
   function spinCat(x, y) {
     try {
       try {
         if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
       } catch (e) {}
-      // El cursor SE VUELVE el gato: se oculta el puntero y el dibujo lo sustituye. / The cursor BECOMES the cat.
-      let st = document.getElementById("cat-oiia-style");
-      if (!st && (document.head || document.documentElement)) {
-        st = document.createElement("style");
-        st.id = "cat-oiia-style";
-        st.textContent = "html.cat-oiia-cursor,html.cat-oiia-cursor body,html.cat-oiia-cursor body *{cursor:none!important;}";
-        (document.head || document.documentElement).appendChild(st);
-      }
+      // NUNCA ocultar el cursor del sistema: el gato ORBITA alrededor del cursor
+      // sin tapar el punto de clic ni bloquear la UI (login/logout, etc.).
+      // NEVER hide the system cursor: the cat ORBITS around the cursor.
+      if (oiiaActive) return;
+      cleanLegacyOiia();
       const art = spinSVGNode();
       if (!art) return;
-      const root = document.documentElement;
-      if (root) root.classList.add("cat-oiia-cursor");
-      const wrap = document.createElement("div");
-      wrap.setAttribute("aria-hidden", "true");
-      wrap.style.cssText = `position:fixed;left:${x - 32}px;top:${y - 32}px;width:64px;height:64px;pointer-events:none;z-index:9999999;`;
-      const spin = document.createElement("div");
-      spin.appendChild(art);
-      spin.style.cssText = "width:64px;height:64px;";
-      wrap.appendChild(spin);
-      (document.documentElement || document.body).appendChild(wrap);
-      const follow = (e) => {
+      oiiaActive = true;
+      const SIZE = 44;
+      const RADIUS = 30; // radio de la orbita alrededor del cursor
+      const DURATION = 1500;
+      const ORBIT_TURNS = 1.5; // vueltas alrededor del cursor durante la celebracion
+      // El handler solo guarda coords (barato); el movimiento lo pinta el rAF con transform (GPU).
+      let mx = typeof x === "number" ? x : window.innerWidth / 2;
+      let my = typeof y === "number" ? y : window.innerHeight / 2;
+      const onMove = (e) => {
         try {
-          if (e && typeof e.clientX === "number") {
-            wrap.style.left = (e.clientX - 32) + "px";
-            wrap.style.top = (e.clientY - 32) + "px";
+          if (e && typeof e.clientX === "number" && typeof e.clientY === "number") {
+            mx = e.clientX;
+            my = e.clientY;
           }
         } catch (err) {}
       };
-      document.addEventListener("mousemove", follow, { passive: true, capture: true });
-      let rot = null;
+      document.addEventListener("mousemove", onMove, { passive: true, capture: true });
+      const wrap = document.createElement("div");
+      wrap.setAttribute("aria-hidden", "true");
+      wrap.id = "cat-oiia-wrap";
+      wrap.style.cssText = `position:fixed;left:0;top:0;width:${SIZE}px;height:${SIZE}px;pointer-events:none;z-index:2147483647;opacity:.95;will-change:transform;margin:0;padding:0;border:0;background:transparent;overflow:visible;`;
+      // Blindaje: ni el CSS de la pagina puede mandarlo detras ni hacerlo clicable.
       try {
-        rot = spin.animate([{ transform: "rotate(0deg)" }, { transform: "rotate(1080deg)" }], { duration: 1600, easing: "linear" });
-      } catch (e) { rot = null; }
+        wrap.style.setProperty("position", "fixed", "important");
+        wrap.style.setProperty("z-index", "2147483647", "important");
+        wrap.style.setProperty("pointer-events", "none", "important");
+      } catch (e) {}
+      const spin = document.createElement("div");
+      try {
+        art.setAttribute("width", String(SIZE));
+        art.setAttribute("height", String(SIZE));
+        art.style.width = SIZE + "px";
+        art.style.height = SIZE + "px";
+      } catch (e) {}
+      spin.appendChild(art);
+      spin.style.cssText = `width:${SIZE}px;height:${SIZE}px;will-change:transform;`;
+      wrap.appendChild(spin);
+      (document.documentElement || document.body).appendChild(wrap);
+      let raf = 0;
+      let ended = false;
       const end = () => {
-        try { document.removeEventListener("mousemove", follow, { capture: true }); } catch (e) {}
-        try { if (root) root.classList.remove("cat-oiia-cursor"); } catch (e) {}
+        if (ended) return;
+        ended = true;
+        oiiaActive = false;
+        try { cancelAnimationFrame(raf); } catch (e) {}
+        try { document.removeEventListener("mousemove", onMove, { capture: true }); } catch (e) {}
+        try { window.removeEventListener("pagehide", end); } catch (e) {}
+        cleanLegacyOiia();
         try { if (wrap.isConnected) wrap.remove(); } catch (e) {}
       };
+      try { window.addEventListener("pagehide", end, { once: true }); } catch (e) {}
+      let t0 = 0;
+      try { t0 = performance.now(); } catch (e) { t0 = Date.now(); }
+      const frame = (now) => {
+        if (ended) return;
+        try {
+          let t = (now - t0) / DURATION;
+          if (!(t >= 0)) t = 0; // relojes distintos si performance.now fallo
+          if (t >= 1) { end(); return; }
+          const ang = t * ORBIT_TURNS * Math.PI * 2;
+          const px = mx + Math.cos(ang) * RADIUS - SIZE / 2;
+          const py = my + Math.sin(ang) * RADIUS - SIZE / 2;
+          const cx = Math.min(Math.max(px, -SIZE / 2), window.innerWidth - SIZE / 2);
+          const cy = Math.min(Math.max(py, -SIZE / 2), window.innerHeight - SIZE / 2);
+          try { wrap.style.setProperty("transform", `translate3d(${cx}px,${cy}px,0)`, "important"); }
+          catch (err2) { wrap.style.transform = `translate3d(${cx}px,${cy}px,0)`; }
+        } catch (err) {}
+        try { raf = requestAnimationFrame(frame); } catch (e) {}
+      };
+      // Giro propio del gato mientras orbita (el gato gira, no el cursor).
+      let rot = null;
+      try {
+        rot = spin.animate([{ transform: "rotate(0deg)" }, { transform: "rotate(1080deg)" }], { duration: DURATION - 100, easing: "linear" });
+      } catch (e) { rot = null; }
       if (rot) rot.onfinish = end;
-      setTimeout(end, 1800);
-    } catch (e) {}
+      try { raf = requestAnimationFrame(frame); } catch (e) {}
+      setTimeout(end, DURATION + 150);
+    } catch (e) {
+      try { oiiaActive = false; } catch (err) {}
+    }
   }
 
   // Destellos al teclear en campos editables (ligero y con limite). / Typing sparkles.
@@ -735,6 +791,9 @@
   } catch (e) {}
   setInterval(updateCursorHide, 600);
 
+  try { cleanLegacyOiia(); } catch (e) {}
+  // Si la pagina vuelve desde bfcache con restos viejos, limpiar antes de pintar.
+  try { window.addEventListener("pageshow", cleanLegacyOiia); } catch (e) {}
   resumeFx();
   apply();
   document.addEventListener("DOMContentLoaded", apply);

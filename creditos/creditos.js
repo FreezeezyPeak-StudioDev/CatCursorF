@@ -1,4 +1,4 @@
-// CatCursorF v1.1.0 - FreezeezyPeak.
+// CatCursorF v1.1.1 - FreezeezyPeak.
 // Creditos con idioma desde _locales. / Credits with locale from _locales.
 // GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 let lang = "es";
