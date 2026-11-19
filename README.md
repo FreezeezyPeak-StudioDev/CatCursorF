@@ -12,7 +12,7 @@
 
 <div align="center">
 
-![CatCursorF](https://img.shields.io/badge/CatCursorF-v1.1.1-blue?style=for-the-badge&logo=firefox)
+![CatCursorF](https://img.shields.io/badge/CatCursorF-v2.0.0-blue?style=for-the-badge&logo=firefox)
 
 ## CatCursorF
 
@@ -38,7 +38,7 @@ Reemplaza todos tus cursores con adorables diseños de gatos. 8 cursores context
 
 100% local • Sin cuentas • Código abierto (GPL-3.0)
 
-### Novedades v1.1.1
+### Novedades v2.0.0
 
 - **Gato orbital** — La celebración de inicio/cierre de sesión y suscripción ya no oculta el cursor: el gato gira suavemente alrededor del puntero, siempre por delante del contenido y sin bloquear la interfaz.
 - **Nueva celebración de cierre de sesión** (además de inicio de sesión).
@@ -146,7 +146,7 @@ Replace all your cursors with adorable cat designs. 8 contextual cursors, 6 visu
 
 100% local • No accounts • Open source (GPL-3.0)
 
-### What's new in v1.1.1
+### What's new in v2.0.0
 
 - **Orbiting cat** — Sign-in/sign-out and subscribe celebrations no longer hide the cursor: the cat smoothly orbits the pointer, always on top of page content and never blocking the UI.
 - **New sign-out celebration** (in addition to sign-in).

@@ -1,0 +1,58 @@
+CATCURSORF - COMMITS PENDIENTES PARA GITHUB
+===========================================
+
+Instruccion: NO subir ni hacer commit/push hasta que el usuario lo pida.
+Cada bloque corresponde a un cambio terminado, listo para publicar.
+
+-------------------------------------------------------------------------------
+[1] Reorganizacion de recursos
+-------------------------------------------------------------------------------
+Titulo: Reorganiza recursos en Resources y legacy
+Descripcion: Rutas corregidas a Resources/Ui y limpieza
+
+Actualizacion
+- Implementación: nueva carpeta Resources con cursors, fx, icons y Ui.
+- Implementación: banner vectorial banner-catcursorf.svg creado en Resources/Ui, sin referenciar.
+- Implementación: carpeta legacy con recursos sin uso y su LEEME.txt.
+- Corrección: todas las rutas de manifest, scripts, páginas y locales apuntan a Resources y Ui.
+- Corrección: requisito mínimo unificado a Firefox 142 en textos de licencia.
+- Limpieza: eliminada la carpeta assets y la carpeta icons de la raíz.
+- Limpieza: iconos simples, cursor Move, gatos extra y PNG sin uso movidos a legacy.
+- Documentación: README.md, chrome/LEEME.txt y textos ES/EN actualizados.
+- Verificación: JSON válidos, seis archivos JS con sintaxis correcta y SVG del banner validado.
+
+-------------------------------------------------------------------------------
+[2] Iconos y banner con estilo mate
+-------------------------------------------------------------------------------
+Titulo: Rediseña iconos y banner mate
+Descripcion: Iconos detallados sin brillo y banner PNG
+
+Actualizacion
+- Implementación: rediseño de los 6 iconos de tema con pelusa, bigotes, collar y motivos propios.
+- Implementación: banner promocional exportado a PNG mate en Resources/Ui.
+- Implementación: fuente HTML del banner conservada en legacy/ui.
+- Corrección: eliminados degradados, brillos y reflejos de iconos y banner.
+- Limpieza: retirado el banner SVG de Resources/Ui y movido a legacy.
+- Documentación: actualizado legacy/LEEME.txt con las fuentes del banner.
+- Verificación: SVG válidos, iconos previsualizados y banner comprobado en PNG.
+
+-------------------------------------------------------------------------------
+[3] Iconos corregidos, banner tecnico y portada
+-------------------------------------------------------------------------------
+Titulo: Corrige iconos negros y crea portada
+Descripcion: Colores explícitos, banner técnico y portada 3:4
+
+Actualizacion
+- Corrección: iconos de tema con colores explícitos; ya no se muestran en negro.
+- Corrección: retirados los motivos de frente en Minecraft, GeoDash, Navidad y Año Nuevo.
+- Implementación: banner horizontal rediseñado con estilo técnico de bordes rectos.
+- Implementación: portada vertical 900x1200 creada en Resources/Ui.
+- Implementación: fuentes HTML del banner y la portada guardadas en legacy/ui.
+- Limpieza: eliminada la previsualización temporal y conservado el generador de iconos en legacy/ui.
+- Documentación: actualizado legacy/LEEME.txt con las nuevas fuentes.
+- Verificación: SVG válidos y PNG de banner y portada revisados.
+
+-------------------------------------------------------------------------------
+PENDIENTE DE REGISTRAR
+-------------------------------------------------------------------------------
+(Se añadirán aquí los siguientes cambios hasta que el usuario pida subirlos.)

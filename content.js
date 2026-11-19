@@ -1,4 +1,4 @@
-// CatCursorF v1.1.1 - FreezeezyPeak.
+// CatCursorF v2.0.0 - FreezeezyPeak.
 // Contenido: cursores contextuales, sonidos, estela, celebraciones y efecto festivo; auto-ocultado en video. / Content: contextual cursors, sounds, trail, celebrations and festive effect; auto-hide on video.
 // GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 (() => {

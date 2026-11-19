@@ -1,4 +1,4 @@
-"""CatCursorF v1.1.1 - FreezeezyPeak.
+"""CatCursorF v2.0.0 - FreezeezyPeak.
 GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 
 Empaqueta CatCursorF en .xpi (rutas con / para Firefox). / Packages CatCursorF as .xpi (paths with / for Firefox).

@@ -1,11 +1,12 @@
 CatCursorF
 ==========
 
-Versión: 1.1.1.
-Novedades 1.1.1: la celebración del gato (inicio/cierre de sesión,
-suscripción) ya no oculta el cursor: orbita alrededor del puntero,
-siempre por delante del contenido; nueva celebración de cierre de
-sesión; la victoria del minijuego del panel tampoco oculta el cursor.
+Versión: 2.0.0.
+Novedades 2.0.0 (heredadas de 1.1.1): la celebración del gato
+(inicio/cierre de sesión, suscripción) ya no oculta el cursor:
+orbita alrededor del puntero, siempre por delante del contenido;
+nueva celebración de cierre de sesión; la victoria del minijuego
+del panel tampoco oculta el cursor.
 
 Autor y organización: FreezeezyPeak.
 GitHub: github.com/FreezeezyPeak-StudioDev

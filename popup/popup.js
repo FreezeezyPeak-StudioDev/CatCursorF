@@ -1,4 +1,4 @@
-// CatCursorF v1.1.1 - FreezeezyPeak.
+// CatCursorF v2.0.0 - FreezeezyPeak.
 // Menu, estados, juego Shell, diagnostico e idioma desde _locales. / Menu, states, Shell game, diagnosis and locale from _locales.
 // GitHub: github.com/FreezeezyPeak-StudioDev | GitLab: gitlab.com/freezeezypeak.studiodev | Contacto/Contact: freezeezypeak.studiodev@gmail.com
 const EMAIL = "freezeezypeak.studiodev@gmail.com";
