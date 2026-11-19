@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="96" height="96" role="img" aria-label="CatCursorF - tema Calculadora">
+  <!-- CatCursorF - FreezeezyPeak. Icono de tema con colores explicitos. -->
+
+  <!-- orejas -->
+  <path d="M33 47 L20 10 L55 30 Z" fill="#4a4a52" stroke="#ece6da" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M95 47 L108 10 L73 30 Z" fill="#4a4a52" stroke="#ece6da" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M35 42 L27 19 L50 31 Z" fill="#ff9db0"/>
+  <path d="M93 42 L101 19 L78 31 Z" fill="#ff9db0"/>
+  <path d="M31 34 q5 2 7 8" fill="none" stroke="#ece6da" stroke-width="1.8" stroke-linecap="round" opacity=".5"/>
+  <path d="M97 34 q-5 2 -7 8" fill="none" stroke="#ece6da" stroke-width="1.8" stroke-linecap="round" opacity=".5"/>
+
+  <!-- mejillas con pelusa -->
+  <path d="M30 62 L20 64 L27 70 L17 76 L28 83 L19 89 L33 95 Z" fill="#4a4a52" stroke="#ece6da" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M98 62 L108 64 L101 70 L111 76 L100 83 L109 89 L95 95 Z" fill="#4a4a52" stroke="#ece6da" stroke-width="2.4" stroke-linejoin="round"/>
+
+  <!-- cabeza -->
+  <path d="M64 26 C43 26 25 42 25 67 C25 92 42 109 64 109 C86 109 103 92 103 67 C103 42 85 26 64 26 Z" fill="#4a4a52" stroke="#ece6da" stroke-width="2.4" stroke-linejoin="round"/>
+
+  <!-- sombra plana inferior -->
+  <path d="M31 82 C39 99 50 107 64 107 C78 107 89 99 97 82 C91 95 79 103 64 103 C49 103 37 95 31 82 Z" fill="#33333a" opacity=".55"/>
+
+
+  <!-- rayas de la frente -->
+  <path d="M50 37 l3 8 M78 37 l-3 8 M38 49 l7 3 M90 49 l-7 3" fill="none" stroke="#ece6da" stroke-width="1.8" stroke-linecap="round" opacity=".45"/>
+  <!-- motivo: teclado de calculadora -->
+  <g transform="translate(64 45)">
+    <rect x="-11" y="-8" width="22" height="16" rx="3" fill="none" stroke="#ffd94d" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M-11 -2 h22" fill="none" stroke="#ffd94d" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="-6" cy="4.5" r="1.5" fill="#ffd94d"/>
+    <circle cx="0" cy="4.5" r="1.5" fill="#ffd94d"/>
+    <circle cx="6" cy="4.5" r="1.5" fill="#ffd94d"/>
+    <path d="M-5.5 -5 h11" fill="none" stroke="#ffd94d" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- ojos -->
+  <ellipse cx="47" cy="66" rx="9.5" ry="11.5" fill="#ffd94d" stroke="#ece6da" stroke-width="2.4"/>
+  <ellipse cx="81" cy="66" rx="9.5" ry="11.5" fill="#ffd94d" stroke="#ece6da" stroke-width="2.4"/>
+  <ellipse cx="47" cy="67" rx="3.5" ry="8.4" fill="#17171b"/>
+  <ellipse cx="81" cy="67" rx="3.5" ry="8.4" fill="#17171b"/>
+  <path d="M37.5 62.5 q9.5 -6 19 0" fill="none" stroke="#ece6da" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M71.5 62.5 q9.5 -6 19 0" fill="none" stroke="#ece6da" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- almohadillas y pecas -->
+  <ellipse cx="50" cy="89" rx="10.5" ry="7.5" fill="#33333a" opacity=".5"/>
+  <ellipse cx="78" cy="89" rx="10.5" ry="7.5" fill="#33333a" opacity=".5"/>
+  <g fill="#ece6da" opacity=".55">
+    <circle cx="44" cy="87" r="1"/><circle cx="50" cy="85" r="1"/><circle cx="56" cy="87" r="1"/>
+    <circle cx="72" cy="87" r="1"/><circle cx="78" cy="85" r="1"/><circle cx="84" cy="87" r="1"/>
+  </g>
+
+  <!-- nariz y boca -->
+  <path d="M59 78 L69 78 L64 84 Z" fill="#ff9db0" stroke="#ece6da" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="61.5" cy="80" r=".9" fill="#ece6da" opacity=".55"/>
+  <circle cx="66.5" cy="80" r=".9" fill="#ece6da" opacity=".55"/>
+  <path d="M64 84 v4 M64 88 q-5 6 -10 1 M64 88 q5 6 10 1" fill="none" stroke="#ece6da" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- bigotes -->
+  <g fill="none" stroke="#ece6da" stroke-width="2" stroke-linecap="round" opacity=".72">
+    <path d="M34 78 q-13 -4 -19 -8"/>
+    <path d="M34 85 q-14 0 -21 -1"/>
+    <path d="M35 92 q-12 5 -17 10"/>
+    <path d="M94 78 q13 -4 19 -8"/>
+    <path d="M94 85 q14 0 21 -1"/>
+    <path d="M93 92 q12 5 17 10"/>
+  </g>
+
+  <!-- pecho y collar -->
+  <path d="M46 106 q18 9 36 0 l-3 8 q-15 7 -30 0 Z" fill="#33333a"/>
+  <path d="M39 102 q25 12 50 0 l-2 8 q-23 11 -46 0 Z" fill="#6b7280" stroke="#ece6da" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="64" cy="113" r="5" fill="#ffd94d" stroke="#ece6da" stroke-width="2.4"/>
+</svg>

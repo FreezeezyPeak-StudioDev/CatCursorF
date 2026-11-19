@@ -71,11 +71,12 @@ CatCursorF/
 │   ├── es/                        ← Traducciones español
 │   └── en/                        ← Traducciones inglés
 │
-├── assets/
-│   ├── cursors/                   ← 9 archivos .cur (8 en uso)
+├── Resources/
+│   ├── cursors/                   ← 8 archivos .cur en uso
 │   ├── fx/                        ← Archivos de audio
 │   ├── icons/                     ← Iconos por tema
-│   └── texturas/                  ← Elementos gráficos
+│   └── Ui/                        ← Elementos gráficos e interfaz
+├── legacy/                        ← Recursos retirados o sin uso
 │
 ├── chrome/                        ← Estilos de Firefox
 ├── creditos/                      ← Página de créditos
@@ -178,11 +179,12 @@ CatCursorF/
 │   ├── es/                        ← Spanish translations
 │   └── en/                        ← English translations
 │
-├── assets/
-│   ├── cursors/                   ← 9 .cur files (8 in use)
+├── Resources/
+│   ├── cursors/                   ← 8 .cur files in use
 │   ├── fx/                        ← Audio files
 │   ├── icons/                     ← Icons by theme
-│   └── texturas/                  ← Graphic elements
+│   └── Ui/                        ← Graphics and interface elements
+├── legacy/                        ← Retired or unused resources
 │
 ├── chrome/                        ← Firefox styles
 ├── creditos/                      ← Credits page
